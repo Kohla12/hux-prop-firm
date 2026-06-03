@@ -1,0 +1,88 @@
+# ============================================================================
+# HUX PROP FIRM - INFRASTRUCTURE DOCKER-COMPOSE ORCHESTRATION
+# Wires together Nginx frontend, Node.js WS backend, Redis, and PostgreSQL
+# ============================================================================
+
+version: '3.8'
+
+services:
+  # 1. DATABASE LAYER (PostgreSQL 14)
+  hux-postgres:
+    image: postgres:14-alpine
+    container_name: hux-postgres-container
+    environment:
+      POSTGRES_USER: hux_admin
+      POSTGRES_PASSWORD: HUX_secure_db_pass_2026
+      POSTGRES_DB: hux_prop_firm
+    ports:
+      - "5432:5432"
+    volumes:
+      - hux-db-data:/var/lib/postgresql/data
+      # Mount PostgreSQL schema script for automatic database initialization on launch
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hux_admin -d hux_prop_firm"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hux-network
+
+  # 2. IN-MEMORY CACHE LAYER (Redis)
+  hux-redis:
+    image: redis:7-alpine
+    container_name: hux-redis-container
+    ports:
+      - "6379:6379"
+    volumes:
+      - hux-redis-data:/data
+    networks:
+      - hux-network
+
+  # 3. BACKEND CORE MICROSERVICE (Node.js API & WebSockets Gateway)
+  hux-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hux-backend-container
+    environment:
+      - PORT=8080
+      - DATABASE_URL=postgres://hux_admin:HUX_secure_db_pass_2026@hux-postgres:5432/hux_prop_firm
+      - REDIS_URL=redis://hux-redis:6379
+      - JWT_SECRET=HUX_FUTURISTIC_SECURE_KEY
+      - NODE_ENV=production
+    ports:
+      - "8080:8080"
+    depends_on:
+      hux-postgres:
+        condition: service_healthy
+      hux-redis:
+        condition: service_started
+    networks:
+      - hux-network
+
+  # 4. FRONTEND STATIC SERVER (Nginx Alpine serving client assets)
+  hux-frontend:
+    image: nginx:alpine
+    container_name: hux-frontend-container
+    ports:
+      - "80:80"
+    volumes:
+      # Mount interactive frontend index to Nginx public html mount
+      - ./index.html:/usr/share/nginx/html/index.html
+    depends_on:
+      - hux-backend
+    networks:
+      - hux-network
+
+# Network Mappings
+networks:
+  hux-network:
+    driver: bridge
+
+# Volume Mounts
+volumes:
+  hux-db-data:
+    driver: local
+  hux-redis-data:
+    driver: local

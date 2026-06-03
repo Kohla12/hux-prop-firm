@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUX PROP FIRM | Institutional Proprietary Trading Ecosystem</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Trade up to $200,000 on a futuristic, institutional-grade prop firm platform. Enjoy 90% profit splits, instant payouts, AI-driven risk insights, and real-time synchronizations.">
+  <!-- Google Fonts: Outfit (headings) & Inter (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#07080b',
+            'obsidian-light': '#0f1118',
+            'obsidian-card': '#141722',
+            neonBlue: '#00f0ff',
+            neonGreen: '#00ff87',
+            neonRose: '#ff0055',
+            neonAmber: '#ffb300',
+          },
+          boxShadow: {
+            'glow-blue': '0 0 15px rgba(0, 240, 255, 0.25)',
+            'glow-green': '0 0 15px rgba(0, 255, 135, 0.25)',
+            'glow-rose': '0 0 15px rgba(255, 0, 85, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Neon & Grid Styling -->
+  <style>
+    body {
+      background-color: #07080b;
+      color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Neon glow borders */
+    .glow-border-blue {
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      transition: all 0.3s ease;
+    }
+    .glow-border-blue:hover {
+      border-color: rgba(0, 240, 255, 0.5);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+    }
+    
+    .glow-border-green {
+      border: 1px solid rgba(0, 255, 135, 0.15);
+      transition: all 0.3s ease;
+    }
+    .glow-border-green:hover {
+      border-color: rgba(0, 255, 135, 0.5);
+      box-shadow: 0 0 15px rgba(0, 255, 135, 0.15);
+    }
+
+    .glow-border-rose {
+      border: 1px solid rgba(255, 0, 85, 0.15);
+      transition: all 0.3s ease;
+    }
+    .glow-border-rose:hover {
+      border-color: rgba(255, 0, 85, 0.5);
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.15);
+    }
+
+    /* Glassmorphism utility */
+    .glass-card {
+      background: rgba(20, 23, 34, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Grid overlay animation */
+    .grid-bg {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+
+    /* Glowing ambient blobs */
+    .ambient-glow-1 {
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+    }
+    .ambient-glow-2 {
+      background: radial-gradient(circle, rgba(255, 0, 85, 0.06) 0%, transparent 70%);
+    }
+    .ambient-glow-3 {
+      background: radial-gradient(circle, rgba(0, 255, 135, 0.06) 0%, transparent 70%);
+    }
+
+    /* Seamless Payout Ticker animation */
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker 40s linear infinite;
+    }
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Dynamic scanline for KYC scanner */
+    @keyframes scan {
+      0% { top: 0%; opacity: 0.8; }
+      50% { top: 100%; opacity: 0.8; }
+      100% { top: 0%; opacity: 0.8; }
+    }
+    .scan-line {
+      animation: scan 2.5s ease-in-out infinite;
+    }
+
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07080b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #374151;
+    }
+  </style>
+</head>
+<body class="grid-bg min-h-screen flex flex-col relative font-sans antialiased">
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] ambient-glow-1 pointer-events-none z-0"></div>
+  <div class="absolute bottom-[-100px] right-[-100px] w-[600px] h-[600px] ambient-glow-2 pointer-events-none z-0"></div>
+  <div class="absolute top-[40%] left-[30%] w-[800px] h-[800px] ambient-glow-3 pointer-events-none z-0"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="glass-card sticky top-0 z-50 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" onclick="switchTab('landing')" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonBlue to-neonGreen flex items-center justify-center font-heading font-extrabold text-obsidian text-2xl shadow-glow-blue transform group-hover:scale-105 transition-all">
+          H
+        </div>
+        <span class="font-heading font-black text-xl tracking-wider text-white bg-clip-text bg-gradient-to-r group-hover:text-neonBlue transition-all">
+          HUX <span class="text-neonBlue">PROP FIRM</span>
+        </span>
+      </a>
+
+      <!-- Navigation Tabs (SPA) -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-obsidian-light/60 p-1.5 rounded-xl border border-white/5">
+        <button id="nav-landing" onclick="switchTab('landing')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-white bg-white/10">
+          Home
+        </button>
+        <button id="nav-dashboard" onclick="switchTab('dashboard')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5">
+          Trader Terminal
+        </button>
+        <button id="nav-payouts" onclick="switchTab('payouts')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5">
+          Payouts
+        </button>
+        <button id="nav-kyc" onclick="switchTab('kyc')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5">
+          KYC Portal
+        </button>
+        <button id="nav-affiliate" onclick="switchTab('affiliate')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5">
+          Affiliate
+        </button>
+        <button id="nav-admin" onclick="switchTab('admin')" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-dashed border-neonRose/20 hover:border-neonRose/50">
+          Admin Center
+        </button>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center space-x-4">
+        <!-- Live Status Light -->
+        <div class="hidden sm:flex items-center space-x-2 bg-obsidian-light px-3 py-1.5 rounded-lg border border-white/5 text-xs">
+          <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-pulse shadow-glow-green"></span>
+          <span class="text-gray-400 font-semibold tracking-wider uppercase">Live Sync: MT5 Server</span>
+        </div>
+        <!-- Dynamic User Auth Button -->
+        <div id="header-auth-controls" class="flex items-center space-x-2">
+          <button id="btn-header-signin" onclick="openAuthModal('signin')" class="px-4 py-2 bg-white/5 hover:bg-white/10 text-white font-heading font-bold text-xs rounded-xl border border-white/10 transition-all">
+            Sign In
+          </button>
+          <button id="btn-header-signup" onclick="openAuthModal('signup')" class="px-5 py-2.5 bg-gradient-to-r from-neonBlue to-neonBlue/80 hover:from-neonBlue hover:to-neonGreen text-obsidian font-heading font-bold text-xs rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.02] transition-all">
+            Get Funded
+          </button>
+          
+          <!-- Profile Badge (Initially hidden) -->
+          <div id="header-profile-badge" class="hidden flex items-center space-x-2 bg-obsidian-light px-3 py-1.5 rounded-xl border border-white/5 text-xs">
+            <span class="w-2 h-2 rounded-full bg-neonGreen"></span>
+            <span id="header-profile-email" class="text-white font-bold max-w-[120px] truncate">trader@hux.com</span>
+            <button onclick="handleSignOut()" class="text-gray-500 hover:text-neonRose ml-1.5 transition-all">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================
+       AUTHENTICATION GATEWAY MODAL OVERLAY
+       ============================================== -->
+  <div id="auth-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-obsidian/85 backdrop-blur-md p-4">
+    <div class="glass-card rounded-2xl border border-neonBlue/20 p-8 shadow-glow-blue w-full max-w-md relative overflow-hidden transition-all duration-300">
+      <div class="absolute -top-16 -right-16 w-36 h-36 bg-neonBlue/5 rounded-full blur-2xl"></div>
+      
+      <!-- Close button -->
+      <button onclick="closeAuthModal()" class="absolute right-4 top-4 text-gray-500 hover:text-white transition-all">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Auth Panels Switcher -->
+      <div id="auth-panel-main">
+        <div class="text-center mb-6">
+          <h3 id="auth-modal-title" class="font-heading font-black text-white text-xl tracking-wider uppercase">Sign In to HUX</h3>
+          <p id="auth-modal-desc" class="text-xs text-gray-500 mt-1.5">Enter credentials to open your live trading synchronization sessions.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Auth Mode Toggle -->
+          <div class="grid grid-cols-2 bg-obsidian-light p-1 rounded-xl border border-white/5 text-xs text-center font-bold">
+            <button id="btn-toggle-signin" onclick="toggleAuthMode('signin')" class="py-2 rounded-lg text-white bg-white/5 border border-white/5">Sign In</button>
+            <button id="btn-toggle-signup" onclick="toggleAuthMode('signup')" class="py-2 text-gray-400 hover:text-white">Create Account</button>
+          </div>
+
+          <!-- Email Input -->
+          <div>
+            <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block mb-1">Email Address</label>
+            <input id="auth-email" type="email" placeholder="e.g. trader@hux.com" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-4 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue">
+          </div>
+
+          <!-- Password Input -->
+          <div>
+            <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block mb-1">Passcode</label>
+            <input id="auth-pass" type="password" placeholder="••••••••" oninput="checkPasswordStrength()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-4 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue">
+            
+            <!-- Password Strength Indicator (For Sign Up) -->
+            <div id="signup-strength-panel" class="hidden mt-2">
+              <div class="flex justify-between items-center text-[9px] font-bold text-gray-500 uppercase mb-1">
+                <span>Passcode strength</span>
+                <span id="strength-txt" class="text-neonRose">Weak</span>
+              </div>
+              <div class="w-full h-1 bg-obsidian rounded-full overflow-hidden">
+                <div id="strength-bar" class="h-full bg-neonRose transition-all duration-300" style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+
+          <span id="auth-error-msg" class="hidden text-neonRose text-[10px] font-bold block uppercase tracking-wider animate-pulse text-center">Authentication credentials validation failed.</span>
+
+          <!-- Action Button -->
+          <button id="btn-auth-submit" onclick="submitAuthGate()" class="w-full py-3.5 bg-neonBlue hover:bg-neonGreen text-obsidian font-heading font-black text-sm rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.01] transition-all">
+            Secure Log In
+          </button>
+
+          <!-- Social Oauth Mockups -->
+          <div class="border-t border-white/5 my-4 pt-4 text-center">
+            <span class="text-[9px] text-gray-600 block mb-3 uppercase font-bold tracking-widest">Or Authorized via Single Sign-On</span>
+            <div class="grid grid-cols-2 gap-3">
+              <button onclick="triggerMockSso('Google')" class="py-2 bg-white/5 hover:bg-white/10 text-[10px] font-bold border border-white/10 rounded-xl flex items-center justify-center space-x-2 text-gray-400 hover:text-white">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.579-7.859-7.993 0-4.414 3.53-7.993 7.86-7.993 2.46 0 4.105 1.025 5.043 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.985 0-.745-.078-1.32-.176-1.886H12.24z"/></svg>
+                <span>Google</span>
+              </button>
+              <button onclick="triggerMockSso('Apple')" class="py-2 bg-white/5 hover:bg-white/10 text-[10px] font-bold border border-white/10 rounded-xl flex items-center justify-center space-x-2 text-gray-400 hover:text-white">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.2.67-2.92 1.49-.62.71-1.16 1.85-1.01 2.96 1.12.09 2.27-.58 2.94-1.39z"/></svg>
+                <span>Apple ID</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Factor Authentication OTP Verification Panel -->
+      <div id="auth-panel-otp" class="hidden">
+        <div class="text-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-neonBlue/10 border border-neonBlue/20 flex items-center justify-center mx-auto text-neonBlue shadow-glow-blue mb-4 animate-pulse">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-heading font-black text-white text-lg tracking-wider uppercase">OTP 2FA SIGNATURE REQUIRED</h3>
+          <p class="text-xs text-gray-500 mt-1.5">A secure 6-digit OTP code has been generated to verify your device profile parameters.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block text-left mb-1.5">Enter Verification Token</label>
+            <input id="auth-otp" type="text" placeholder="102943" maxlength="6" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-4 py-3 text-center text-white tracking-widest text-lg font-bold focus:outline-none focus:border-neonBlue">
+          </div>
+
+          <span id="otp-error-msg" class="hidden text-neonRose text-[10px] font-bold block uppercase tracking-wider animate-pulse text-center">Invalid 2FA token signature. Please re-enter.</span>
+
+          <button onclick="submitOtpVerification()" class="w-full py-3.5 bg-neonGreen hover:bg-neonGreen/80 text-obsidian font-heading font-black text-sm rounded-xl shadow-glow-green transform hover:scale-[1.01] transition-all">
+            Confirm Signature
+          </button>
+          
+          <p class="text-[9px] text-gray-600 text-center italic mt-2">Test Signature code is: <strong>"102943"</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOTIFICATION TOAST -->
+  <div id="toast-notification" class="fixed top-24 right-4 z-50 transform translate-x-[150%] transition-transform duration-500 ease-out glass-card rounded-xl p-4 border border-neonRose max-w-sm flex items-start space-x-3 shadow-glow-rose">
+    <div class="p-2 rounded-lg bg-neonRose/10 text-neonRose">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+    </div>
+    <div class="flex-1">
+      <h4 id="toast-title" class="font-bold text-white text-sm">Account Breach Triggered</h4>
+      <p id="toast-desc" class="text-gray-400 text-xs mt-1">Challenge breached due to daily drawdown excess.</p>
+    </div>
+    <button onclick="dismissToast()" class="text-gray-500 hover:text-white">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- MAIN SPA WRAPPER -->
+  <main class="flex-grow z-10">
+
+    <!-- ==============================================
+         1. LANDING PAGE VIEW
+         ============================================== -->
+    <div id="view-landing" class="view-section">
+      <!-- Hero Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center relative">
+        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/20 tracking-wider uppercase mb-6 animate-pulse">
+          ⚡ NEXT-GENERATION PROPRIETARY TRADING
+        </span>
+        <h1 class="text-5xl sm:text-7xl font-heading font-black tracking-tight leading-tight text-white mb-6">
+          THE BILLION-DOLLAR<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonGreen to-neonBlue">FUTURISTIC PROP FIRM</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-gray-400 text-lg sm:text-xl mb-10 leading-relaxed">
+          Access institutional capital scales up to <span class="text-white font-semibold">$200,000</span>. Keep up to <span class="text-neonGreen font-semibold">90%</span> of profits. Powered by low-latency server bridges and automated AI risk diagnostics.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <button onclick="smoothScrollTo('pricing-section')" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-neonBlue to-neonGreen hover:from-neonGreen hover:to-neonBlue text-obsidian font-heading font-black text-base rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.03] transition-all">
+            Get Funded Today
+          </button>
+          <button onclick="switchTab('dashboard')" class="w-full sm:w-auto px-8 py-4 glass-card hover:bg-white/5 border border-white/10 hover:border-white/20 text-white font-heading font-bold text-base rounded-xl transform hover:scale-[1.03] transition-all flex items-center justify-center space-x-2">
+            <span>Explore Demo Console</span>
+            <svg class="w-5 h-5 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Live Payout Scroll Ticker -->
+      <section class="border-y border-white/5 bg-obsidian-light/35 py-5 overflow-hidden select-none mb-16">
+        <div class="max-w-7xl mx-auto px-4 mb-2">
+          <div class="flex items-center space-x-2 text-xs font-bold uppercase text-gray-500 tracking-widest">
+            <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-ping"></span>
+            <span>Real-Time Payout ledger</span>
+          </div>
+        </div>
+        <div class="ticker-track">
+          <!-- Ticker items duplicated for seamless loop -->
+          <div class="flex items-center space-x-8 px-4 text-sm">
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Daniel K. (US)</span> <strong class="text-neonGreen">+$4,821.50</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">USDT</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Sarah M. (UK)</span> <strong class="text-neonGreen">+$12,450.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">WIRE</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Takeshi S. (JP)</span> <strong class="text-neonGreen">+$8,901.20</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">BTC</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Jessica O. (NG)</span> <strong class="text-neonGreen">+$3,411.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">USDT</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Liam P. (DE)</span> <strong class="text-neonGreen">+$15,920.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">WIRE</span></span>
+          </div>
+          <div class="flex items-center space-x-8 px-4 text-sm">
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Daniel K. (US)</span> <strong class="text-neonGreen">+$4,821.50</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">USDT</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Sarah M. (UK)</span> <strong class="text-neonGreen">+$12,450.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">WIRE</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Takeshi S. (JP)</span> <strong class="text-neonGreen">+$8,901.20</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">BTC</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Jessica O. (NG)</span> <strong class="text-neonGreen">+$3,411.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">USDT</span></span>
+            <span class="flex items-center space-x-2 bg-obsidian-card/60 px-4 py-2.5 rounded-xl border border-white/5"><span class="text-gray-400 font-medium">Trader Liam P. (DE)</span> <strong class="text-neonGreen">+$15,920.00</strong> <span class="text-xs bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20">WIRE</span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Stats Grid -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="glass-card rounded-2xl p-8 border border-white/5 text-center shadow-lg relative group overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-32 h-32 bg-neonBlue/10 rounded-full blur-2xl group-hover:bg-neonBlue/20 transition-all"></div>
+            <div class="font-heading font-black text-4xl sm:text-5xl text-white mb-2">$84.2M+</div>
+            <div class="text-neonBlue text-sm font-bold uppercase tracking-widest mb-3">Total Capital Scaled</div>
+            <p class="text-gray-400 text-sm">We provide highly scalable server resources and funding for qualified systematic and manual traders worldwide.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-8 border border-white/5 text-center shadow-lg relative group overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-32 h-32 bg-neonGreen/10 rounded-full blur-2xl group-hover:bg-neonGreen/20 transition-all"></div>
+            <div class="font-heading font-black text-4xl sm:text-5xl text-white mb-2">90/10</div>
+            <div class="text-neonGreen text-sm font-bold uppercase tracking-widest mb-3">Profit Split Ratio</div>
+            <p class="text-gray-400 text-sm">Retain 90% of your gains. Keep your strategies profitable with our institutional leverage and tight execution spreads.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-8 border border-white/5 text-center shadow-lg relative group overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-32 h-32 bg-neonRose/10 rounded-full blur-2xl group-hover:bg-neonRose/20 transition-all"></div>
+            <div class="font-heading font-black text-4xl sm:text-5xl text-white mb-2">4.8 Hours</div>
+            <div class="text-neonRose text-sm font-bold uppercase tracking-widest mb-3">Average Payout Speed</div>
+            <p class="text-gray-400 text-sm">Withdrawal approvals processed seamlessly via automations. Instant support options via cryptocurrency and international wire networks.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dynamic Challenge Pricing Section -->
+      <section id="pricing-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-28 scroll-mt-24">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mb-4">FUNDING CHALLENGE SCHEMES</h2>
+          <p class="text-gray-400 text-sm max-w-xl mx-auto">Select your assessment format and scale account sizes. Satisfy rules and get promoting to a live partner tier instantly.</p>
+          
+          <!-- Mode Selector (1-Step vs 2-Step vs Instant) -->
+          <div class="inline-flex bg-obsidian-light p-1 rounded-xl border border-white/5 mt-8">
+            <button id="btn-mode-1" onclick="selectPricingMode('1-step')" class="px-5 py-2.5 rounded-lg text-sm font-bold transition-all text-white bg-white/10">1-Step Fast</button>
+            <button id="btn-mode-2" onclick="selectPricingMode('2-step')" class="px-5 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white">2-Step Standard</button>
+            <button id="btn-mode-instant" onclick="selectPricingMode('instant')" class="px-5 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white">Instant Funded</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <!-- Size selection list (Left column) -->
+          <div class="lg:col-span-1 flex flex-col space-y-3 bg-obsidian-light/60 p-4 rounded-2xl border border-white/5">
+            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest px-2 mb-2">Account Capital Size</h4>
+            <button id="btn-size-5k" onclick="selectPricingSize(5000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-white bg-white/5 border border-white/10 flex items-center justify-between">
+              <span>$5,000 USD</span>
+              <span class="text-xs text-neonBlue bg-neonBlue/10 px-2 py-0.5 rounded border border-neonBlue/20">Starter</span>
+            </button>
+            <button id="btn-size-10k" onclick="selectPricingSize(10000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent flex items-center justify-between">
+              <span>$10,000 USD</span>
+            </button>
+            <button id="btn-size-25k" onclick="selectPricingSize(25000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent flex items-center justify-between">
+              <span>$25,000 USD</span>
+            </button>
+            <button id="btn-size-50k" onclick="selectPricingSize(50000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent flex items-center justify-between">
+              <span>$50,000 USD</span>
+              <span class="text-xs text-neonGreen bg-neonGreen/10 px-2 py-0.5 rounded border border-neonGreen/20">Popular</span>
+            </button>
+            <button id="btn-size-100k" onclick="selectPricingSize(100000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent flex items-center justify-between">
+              <span>$100,000 USD</span>
+            </button>
+            <button id="btn-size-200k" onclick="selectPricingSize(200000)" class="w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent flex items-center justify-between">
+              <span>$200,000 USD</span>
+              <span class="text-xs text-neonRose bg-neonRose/10 px-2 py-0.5 rounded border border-neonRose/20">Elite</span>
+            </button>
+          </div>
+
+          <!-- Dynamic rules sheet & pricing calculations (Middle/Right columns) -->
+          <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Rules cards -->
+            <div class="md:col-span-2 bg-obsidian-card rounded-2xl border border-white/5 p-8 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+              <div class="absolute -top-10 -left-10 w-24 h-24 bg-neonBlue/5 rounded-full blur-xl"></div>
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 class="font-heading font-black text-2xl text-white">Objective Requirements</h3>
+                    <p class="text-xs text-gray-500 mt-1">Review active trading rules for target promotion.</p>
+                  </div>
+                  <span id="price-card-tier" class="text-xs bg-neonBlue/10 text-neonBlue border border-neonBlue/20 font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fast Challenge</span>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 text-sm">
+                  <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5">
+                    <span class="text-gray-500 font-bold text-xs uppercase block tracking-wider">Profit Target</span>
+                    <strong id="price-card-target" class="text-neonGreen text-xl font-heading font-bold block mt-1">+$400.00 (8%)</strong>
+                  </div>
+                  <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5">
+                    <span class="text-gray-500 font-bold text-xs uppercase block tracking-wider">Daily Drawdown</span>
+                    <strong id="price-card-daily" class="text-neonRose text-xl font-heading font-bold block mt-1">-$250.00 (5%)</strong>
+                  </div>
+                  <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5">
+                    <span class="text-gray-500 font-bold text-xs uppercase block tracking-wider">Max Drawdown</span>
+                    <strong id="price-card-max" class="text-neonRose text-xl font-heading font-bold block mt-1">-$500.00 (10%)</strong>
+                  </div>
+                  <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5">
+                    <span class="text-gray-500 font-bold text-xs uppercase block tracking-wider">Min Trading Days</span>
+                    <strong id="price-card-days" class="text-white text-xl font-heading font-bold block mt-1">3 Days</strong>
+                  </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-obsidian-light/40 rounded-xl border border-white/5 text-xs text-gray-400 flex items-start space-x-2.5">
+                  <svg class="w-4 h-4 text-neonBlue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>Leverage configured up to <strong>1:100</strong>. Automated consistency metrics monitor account risk distributions in real-time. Instant restages are allowed.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Buy Card -->
+            <div class="md:col-span-1 bg-gradient-to-b from-obsidian-card to-obsidian-light rounded-2xl border border-neonBlue/20 p-8 shadow-glow-blue flex flex-col justify-between items-center text-center relative overflow-hidden">
+              <div class="absolute -top-16 -right-16 w-36 h-36 bg-neonBlue/10 rounded-full blur-2xl"></div>
+              
+              <div class="w-full">
+                <span class="text-gray-500 font-bold text-xs uppercase tracking-widest block mb-1">Evaluation Fee</span>
+                <h3 id="price-card-size" class="font-heading font-black text-white text-3xl mb-1">$5,000</h3>
+                <span class="text-gray-400 text-xs block mb-8">Virtual Initial Balance</span>
+                
+                <div class="font-heading font-extrabold text-neonBlue text-5xl mb-1">
+                  <span id="price-card-fee">$49</span>
+                </div>
+                <span class="text-gray-500 text-xs block">One-time refund-eligible payment</span>
+              </div>
+              
+              <div class="w-full mt-8">
+                <button onclick="buyChallenge()" class="w-full py-4 bg-neonBlue hover:bg-neonGreen text-obsidian font-heading font-black text-base rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.03] transition-all">
+                  Initialize Challenge
+                </button>
+                <span class="text-gray-500 text-[10px] block mt-3">Fast execution • Instant login access • Secured Checkout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Timeline Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-28">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mb-4">THE TRADER ROADMAP</h2>
+          <p class="text-gray-400 text-sm max-w-xl mx-auto">See how system integrations scale your professional prop partnership.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <!-- Connective background line -->
+          <div class="hidden md:block absolute top-[60px] left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-neonBlue via-neonGreen to-neonRose z-0 opacity-40"></div>
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 text-center relative z-10">
+            <div class="w-12 h-12 rounded-full bg-neonBlue/10 text-neonBlue flex items-center justify-center font-heading font-extrabold text-lg mx-auto mb-4 border border-neonBlue/20">01</div>
+            <h4 class="font-heading font-bold text-white text-lg mb-2">Challenge Choice</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Select an evaluation sizing tier fitting your system limits. Gain login codes to live bridges immediately.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6 border border-white/5 text-center relative z-10">
+            <div class="w-12 h-12 rounded-full bg-neonBlue/10 text-neonBlue flex items-center justify-center font-heading font-extrabold text-lg mx-auto mb-4 border border-neonBlue/20">02</div>
+            <h4 class="font-heading font-bold text-white text-lg mb-2">Rule Evaluation</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Fulfill profit margins (8% - 10%) while retaining balances safely inside drawdown constraints (5% Daily, 10% Max).</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6 border border-white/5 text-center relative z-10">
+            <div class="w-12 h-12 rounded-full bg-neonGreen/10 text-neonGreen flex items-center justify-center font-heading font-extrabold text-lg mx-auto mb-4 border border-neonGreen/20">03</div>
+            <h4 class="font-heading font-bold text-white text-lg mb-2">Instant KYC Promotion</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Perform scanning validations within the portal to receive live partner credential details from the Admin console.</p>
+          </div>
+          <div class="glass-card rounded-2xl p-6 border border-white/5 text-center relative z-10">
+            <div class="w-12 h-12 rounded-full bg-neonRose/10 text-neonRose flex items-center justify-center font-heading font-extrabold text-lg mx-auto mb-4 border border-neonRose/20">04</div>
+            <h4 class="font-heading font-bold text-white text-lg mb-2">System Scaling</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Request payouts on regular splits. Double balances dynamically for every 10% profit generated across consecutive cycles.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="max-w-4xl mx-auto px-4 mb-24">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-heading font-black text-white mb-2">FAQ</h2>
+          <p class="text-gray-400 text-sm">Frequently asked details on institutional prop specifications.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="glass-card rounded-xl p-5 border border-white/5 cursor-pointer group" onclick="toggleFaq(1)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-white group-hover:text-neonBlue transition-all text-sm sm:text-base">What represents a breach of the daily drawdown rules?</h4>
+              <svg id="faq-icon-1" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <p id="faq-ans-1" class="hidden text-gray-400 text-sm mt-3 leading-relaxed">
+              The daily drawdown limit (typically 5%) is based on your account's midnight equity/balance (whichever is higher). Daily losses (including floating open trade PnL) must never exceed this baseline value.
+            </p>
+          </div>
+          <div class="glass-card rounded-xl p-5 border border-white/5 cursor-pointer group" onclick="toggleFaq(2)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-white group-hover:text-neonBlue transition-all text-sm sm:text-base">How fast are withdrawal payout request approvals?</h4>
+              <svg id="faq-icon-2" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <p id="faq-ans-2" class="hidden text-gray-400 text-sm mt-3 leading-relaxed">
+              We approve payout requests within minutes using our automated blockchain and banking network bridges. Average times stand around 4.8 hours from click to payment gateway clearance.
+            </p>
+          </div>
+          <div class="glass-card rounded-xl p-5 border border-white/5 cursor-pointer group" onclick="toggleFaq(3)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-white group-hover:text-neonBlue transition-all text-sm sm:text-base">Are copy traders allowed?</h4>
+              <svg id="faq-icon-3" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <p id="faq-ans-3" class="hidden text-gray-400 text-sm mt-3 leading-relaxed">
+              Yes, we support master copier integrations. However, you must ensure positions comply with individual device registrations and exclude arbitrage mechanisms to avoid automated compliance flags.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- ==============================================
+         1.5. CHECKOUT & PLAN CONFIGURATOR VIEW
+         ============================================== -->
+    <div id="view-checkout" class="view-section hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center mb-8">
+        <span class="text-xs bg-neonBlue/10 text-neonBlue border border-neonBlue/20 font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+          🔒 SECURE GATEWAY CHECKOUT
+        </span>
+        <h2 class="text-3xl font-heading font-black text-white mt-4">CONFIGURE YOUR PLAN & BILLING</h2>
+        <p class="text-gray-400 text-sm mt-1">Review your institutional challenge configuration and complete payment securely.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Plan Configurator & Billing Information (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Plan Configuration Section (FundedNext options) -->
+          <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+            <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Plan Customizations</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Market Type -->
+              <div>
+                <label class="text-xs text-gray-400 font-bold block mb-1.5">Market Type</label>
+                <select id="checkout-market" onchange="updateCheckoutSummary()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue">
+                  <option value="cfds">CFDs (Currencies, Indices, Commodities)</option>
+                  <option value="addons">Addons (Extended drawdowns, double margins)</option>
+                </select>
+              </div>
+
+              <!-- Platform Selection -->
+              <div>
+                <label class="text-xs text-gray-400 font-bold block mb-1.5">Trading Platform</label>
+                <select id="checkout-platform" onchange="updateCheckoutSummary()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue">
+                  <option value="mt5">MetaTrader 5 (Recommended)</option>
+                  <option value="mt4">MetaTrader 4</option>
+                  <option value="ctrader">cTrader</option>
+                  <option value="match_trader">Match Trader</option>
+                </select>
+              </div>
+
+              <!-- Swap vs Swap Free -->
+              <div>
+                <label class="text-xs text-gray-400 font-bold block mb-1.5">Swap Accounts Type</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <button id="btn-swap-standard" onclick="selectCheckoutSwap('standard')" class="py-2.5 rounded-xl text-xs font-bold transition-all text-white bg-white/10 border border-white/10">Standard (Swap)</button>
+                  <button id="btn-swap-free" onclick="selectCheckoutSwap('swap-free')" class="py-2.5 rounded-xl text-xs font-bold transition-all text-gray-400 border border-transparent">Swap-Free</button>
+                </div>
+              </div>
+
+              <!-- Leverage option -->
+              <div>
+                <label class="text-xs text-gray-400 font-bold block mb-1.5">Default Account Leverage</label>
+                <select class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none cursor-not-allowed" disabled>
+                  <option>Stellar Leverage (1:100)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add-Ons Selection Panel (FundedNext custom options) -->
+          <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+            <h3 class="font-heading font-bold text-white text-base mb-2 border-b border-white/5 pb-3">Available Add-ons</h3>
+            <p class="text-[10px] text-gray-500 mb-4">Enhance your funding challenge parameters. Selected add-ons will update challenge permissions dynamically.</p>
+            
+            <div class="space-y-3">
+              <!-- Addon 1: 95% Profit Split -->
+              <div onclick="toggleCheckoutAddon('profit-split')" id="addon-row-profit-split" class="p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center space-x-3">
+                  <input type="checkbox" id="chk-addon-profit-split" class="rounded border-white/10 bg-obsidian text-neonBlue focus:ring-0 pointer-events-none">
+                  <div>
+                    <strong class="text-xs text-white block">95% Profit Split Add-on</strong>
+                    <span class="text-[9px] text-gray-500 block mt-0.5">Elevate your default commission share from 80% to 95%.</span>
+                  </div>
+                </div>
+                <strong class="text-xs text-neonBlue">+20% fee</strong>
+              </div>
+
+              <!-- Addon 2: Bi-Weekly Payouts -->
+              <div onclick="toggleCheckoutAddon('biweekly')" id="addon-row-biweekly" class="p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center space-x-3">
+                  <input type="checkbox" id="chk-addon-biweekly" class="rounded border-white/10 bg-obsidian text-neonBlue focus:ring-0 pointer-events-none">
+                  <div>
+                    <strong class="text-xs text-white block">Bi-Weekly Payouts Add-on</strong>
+                    <span class="text-[9px] text-gray-500 block mt-0.5">Withdraw earnings every 14 days instead of standard 30-day intervals.</span>
+                  </div>
+                </div>
+                <strong class="text-xs text-neonBlue">+10% fee</strong>
+              </div>
+
+              <!-- Addon 3: No Minimum Trading Days -->
+              <div onclick="toggleCheckoutAddon('no-min-days')" id="addon-row-no-min-days" class="p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center space-x-3">
+                  <input type="checkbox" id="chk-addon-no-min-days" class="rounded border-white/10 bg-obsidian text-neonBlue focus:ring-0 pointer-events-none">
+                  <div>
+                    <strong class="text-xs text-white block">No Minimum Trading Days Add-on</strong>
+                    <span class="text-[9px] text-gray-500 block mt-0.5">Promote to live funding immediately upon hitting profit target.</span>
+                  </div>
+                </div>
+                <strong class="text-xs text-neonBlue">+10% fee</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Info Form -->
+          <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+            <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Billing Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs text-gray-400 font-semibold block mb-1">First Name</label>
+                <input id="checkout-first-name" type="text" placeholder="John" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="text-xs text-gray-400 font-semibold block mb-1">Last Name</label>
+                <input id="checkout-last-name" type="text" placeholder="Doe" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+              </div>
+              <div class="md:col-span-2">
+                <label class="text-xs text-gray-400 font-semibold block mb-1">Email Address</label>
+                <input id="checkout-email" type="email" placeholder="john.doe@financials.com" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="text-xs text-gray-400 font-semibold block mb-1">Country</label>
+                <input id="checkout-country" type="text" placeholder="United States" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+              </div>
+              <div>
+                <label class="text-xs text-gray-400 font-semibold block mb-1">Phone Number</label>
+                <input id="checkout-phone" type="text" placeholder="+1 (555) 019-2831" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Methods selection -->
+          <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+            <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Select Payment Method</h3>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <button id="btn-pay-card" onclick="selectPaymentMethod('card')" class="py-3 bg-neonBlue/10 text-neonBlue border border-neonBlue/20 font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                <span>Stripe / Card</span>
+              </button>
+              <button id="btn-pay-crypto" onclick="selectPaymentMethod('crypto')" class="py-3 bg-white/5 text-gray-400 border border-transparent hover:text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Crypto Checkout</span>
+              </button>
+            </div>
+
+            <!-- Card Payment input Panel -->
+            <div id="payment-panel-card" class="space-y-4">
+              <!-- Beautiful glassmorphic credit card mockup -->
+              <div class="glass-card rounded-2xl border border-white/10 p-6 relative overflow-hidden h-40 max-w-sm mx-auto shadow-2xl flex flex-col justify-between text-white select-none">
+                <div class="absolute -top-16 -right-16 w-36 h-36 bg-neonBlue/10 rounded-full blur-2xl"></div>
+                
+                <div class="flex items-center justify-between">
+                  <div class="font-heading font-black tracking-wider text-xs">HUX SECURE CARD</div>
+                  <svg class="w-8 h-8 text-white/40" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                </div>
+                
+                <div id="card-mock-number" class="font-heading font-bold text-lg tracking-widest text-center my-3">•••• •••• •••• ••••</div>
+                
+                <div class="flex items-center justify-between text-[10px] uppercase font-semibold text-gray-400">
+                  <div>
+                    <span>Cardholder</span>
+                    <strong id="card-mock-name" class="block text-white font-bold text-xs mt-0.5">YOUR FULL NAME</strong>
+                  </div>
+                  <div class="text-right">
+                    <span>Expiry</span>
+                    <strong id="card-mock-expiry" class="block text-white font-bold text-xs mt-0.5">MM/YY</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Inputs for card details -->
+              <div class="grid grid-cols-3 gap-3">
+                <div class="col-span-3">
+                  <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block mb-1">Card Number</label>
+                  <input id="checkout-card-num" type="text" placeholder="4111 2222 3333 4444" oninput="updateCardMockup()" maxlength="19" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+                </div>
+                <div class="col-span-2">
+                  <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block mb-1">Cardholder Name</label>
+                  <input id="checkout-card-name" type="text" placeholder="John Doe" oninput="updateCardMockup()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white">
+                </div>
+                <div>
+                  <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block mb-1">Expiry Date</label>
+                  <input id="checkout-card-exp" type="text" placeholder="MM/YY" oninput="updateCardMockup()" maxlength="5" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white text-center">
+                </div>
+              </div>
+            </div>
+
+            <!-- Crypto Payment Panel -->
+            <div id="payment-panel-crypto" class="hidden space-y-4 text-center py-4 bg-obsidian-light/40 rounded-2xl border border-white/5">
+              <div class="relative w-28 h-28 mx-auto bg-white p-2 rounded-xl border border-white/10">
+                <div class="absolute inset-0 bg-neonGreen/10 blur-xl pointer-events-none rounded-xl"></div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TXZ431nSg48H1xP8sL7FjQ38H1Xb784" alt="QR Code" class="w-full h-full block rounded">
+              </div>
+              <div>
+                <span class="text-xs text-neonGreen font-black uppercase tracking-wider">USDT Tether (TRC-20)</span>
+                <span class="text-[10px] text-gray-500 block mt-0.5">Send exactly the required payment value in Tether tokens.</span>
+              </div>
+              <div class="bg-obsidian-light px-3 py-2.5 rounded-xl border border-white/10 flex items-center justify-between text-xs max-w-sm mx-auto overflow-hidden">
+                <span id="crypto-address" class="text-neonBlue select-all truncate mr-2">TXZ431nSg48H1xP8sL7FjQ38H1Xb784</span>
+                <button onclick="copyCryptoAddress()" class="text-gray-400 hover:text-white uppercase font-bold text-[10px]">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Order Summary & Coupon Engine (5 cols) -->
+        <div class="lg:col-span-5 bg-obsidian-card rounded-2xl border border-white/5 p-6 space-y-6 relative overflow-hidden shadow-2xl">
+          <div class="absolute -top-24 -left-24 w-40 h-40 bg-neonBlue/5 rounded-full blur-3xl"></div>
+          
+          <div>
+            <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Plan Summary</h3>
+            <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-gray-500 font-medium">Evaluation Format</span>
+                <strong id="summary-format" class="text-white font-bold">Stellar 2-Step</strong>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500 font-medium">Account Capital Sizing</span>
+                <strong id="summary-size" class="text-white font-bold">$100,000.00</strong>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500 font-medium">Selected Platform</span>
+                <strong id="summary-platform" class="text-white font-bold">MT5</strong>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500 font-medium">Trading Swap Type</span>
+                <strong id="summary-swap" class="text-white font-bold">Standard (Swap)</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coupon Code Engine -->
+          <div>
+            <label class="text-xs text-gray-400 font-bold block mb-2">Discount Coupon Code</label>
+            <div class="flex items-center space-x-2">
+              <input id="checkout-coupon" type="text" placeholder="Enter coupon (e.g. EIDFNC)" class="flex-grow bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-xs text-white uppercase focus:outline-none focus:border-neonBlue">
+              <button onclick="applyCheckoutCoupon()" class="bg-neonBlue/10 hover:bg-neonBlue/20 text-neonBlue border border-neonBlue/20 font-heading font-black text-xs px-4 py-2.5 rounded-xl transition-all">Apply</button>
+            </div>
+            <span id="coupon-success-msg" class="hidden text-neonGreen text-[10px] font-bold block mt-1.5 uppercase tracking-wider animate-pulse">⚡ Coupon Applied Successfully: 10% Discounted!</span>
+          </div>
+
+          <!-- Price Calculations sheet -->
+          <div class="border-t border-white/5 pt-4 space-y-2.5 text-xs">
+            <div class="flex justify-between text-gray-500">
+              <span>Plan Base Fee</span>
+              <span id="checkout-base-fee">$499.00</span>
+            </div>
+            <div id="checkout-discount-row" class="hidden flex justify-between text-neonGreen font-bold">
+              <span>Coupon Discount (10%)</span>
+              <span id="checkout-discount-val">-$49.90</span>
+            </div>
+            <div class="flex justify-between text-white font-bold text-sm border-t border-white/5 pt-2.5">
+              <span>Total amount to pay</span>
+              <strong id="checkout-total-price" class="text-neonBlue font-heading font-black text-base">$499.00</strong>
+            </div>
+          </div>
+
+          <!-- SECURE COMPLETE CHECKOUT TRIGGER -->
+          <div>
+            <button onclick="completePaymentCheckout()" class="w-full py-4 bg-gradient-to-r from-neonBlue to-neonGreen hover:from-neonGreen hover:to-neonBlue text-obsidian font-heading font-black text-base rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.01] transition-all flex items-center justify-center space-x-2">
+              <svg class="w-5 h-5 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              <span>Complete Payment Check</span>
+            </button>
+            <p class="text-[9px] text-gray-600 text-center mt-3 leading-relaxed">Secured 256-bit encryption. All refund claims are protected under Stellar refund guarantees.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==============================================
+         2. TRADER DASHBOARD VIEW
+         ============================================== -->
+    <div id="view-dashboard" class="view-section hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Top Overview Bar -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="glass-card rounded-xl p-4 border border-white/5">
+          <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Challenge Status</span>
+          <div class="flex items-center space-x-2 mt-1">
+            <span id="dash-status-badge" class="px-2.5 py-0.5 rounded text-xs font-black uppercase bg-neonBlue/10 text-neonBlue border border-neonBlue/20">Phase 1 Active</span>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl p-4 border border-white/5">
+          <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Account ID</span>
+          <strong id="dash-account-id" class="text-white text-base block mt-1 font-heading">HUX-7840132</strong>
+        </div>
+        <div class="glass-card rounded-xl p-4 border border-white/5">
+          <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Virtual Balance</span>
+          <strong id="dash-balance-value" class="text-white text-lg font-heading font-black block mt-1">$5,000.00</strong>
+        </div>
+        <div class="glass-card rounded-xl p-4 border border-white/5">
+          <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Virtual Equity</span>
+          <strong id="dash-equity-value" class="text-neonGreen text-lg font-heading font-black block mt-1">$5,000.00</strong>
+        </div>
+      </div>
+
+      <!-- Main Terminal Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left: Order Ticket (4 cols) -->
+        <div class="lg:col-span-3 bg-obsidian-card rounded-2xl border border-white/5 p-6 flex flex-col justify-between h-[520px]">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
+              <h3 class="font-heading font-black text-white text-lg">Order Entry</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-pulse"></span>
+            </div>
+
+            <!-- Asset selection -->
+            <div class="mb-4">
+              <label class="text-xs text-gray-400 font-bold block mb-1">Asset Symbol</label>
+              <select id="order-asset" onchange="changeAssetSymbol()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-neonBlue">
+                <option value="EURUSD">EURUSD (Euro / US Dollar)</option>
+                <option value="GBPUSD">GBPUSD (Great Britain Pound / USD)</option>
+                <option value="BTCUSD">BTCUSD (Bitcoin / US Dollar)</option>
+                <option value="XAUUSD">XAUUSD (Gold / US Dollar)</option>
+              </select>
+            </div>
+
+            <!-- Lot Size input -->
+            <div class="mb-4">
+              <label class="text-xs text-gray-400 font-bold block mb-1">Volume (Lots)</label>
+              <div class="flex items-center space-x-2">
+                <button onclick="modifyLots(-1)" class="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 text-white font-bold">-</button>
+                <input id="order-lots" type="number" step="0.1" value="1.0" class="flex-grow bg-obsidian-light text-center rounded-lg border border-white/10 py-2 text-white font-bold text-sm" readonly>
+                <button onclick="modifyLots(1)" class="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 text-white font-bold">+</button>
+              </div>
+            </div>
+
+            <!-- Asset Ticker Prices -->
+            <div class="bg-obsidian-light/60 p-3.5 rounded-xl border border-white/5 flex items-center justify-between mb-4">
+              <div>
+                <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block">Bid Price</span>
+                <span id="ticker-bid" class="text-neonRose font-bold font-heading text-sm">1.0825</span>
+              </div>
+              <div class="border-r border-white/5 h-6"></div>
+              <div>
+                <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block">Ask Price</span>
+                <span id="ticker-ask" class="text-neonGreen font-bold font-heading text-sm">1.0827</span>
+              </div>
+            </div>
+
+            <!-- Limit Risk parameters -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div>
+                <label class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block mb-1">Stop Loss (SL)</label>
+                <input id="order-sl" type="text" placeholder="Optional" class="w-full bg-obsidian-light rounded-lg border border-white/10 py-1.5 px-2.5 text-xs text-white text-center">
+              </div>
+              <div>
+                <label class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block mb-1">Take Profit (TP)</label>
+                <input id="order-tp" type="text" placeholder="Optional" class="w-full bg-obsidian-light rounded-lg border border-white/10 py-1.5 px-2.5 text-xs text-white text-center">
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Actions -->
+          <div class="grid grid-cols-2 gap-4">
+            <button onclick="placeOrder('SELL')" class="py-3 bg-neonRose hover:bg-neonRose/90 text-white font-heading font-black text-sm rounded-xl shadow-glow-rose transform hover:scale-[1.02] transition-all">
+              SELL / SHORT
+            </button>
+            <button onclick="placeOrder('BUY')" class="py-3 bg-neonGreen hover:bg-neonGreen/90 text-obsidian font-heading font-black text-sm rounded-xl shadow-glow-green transform hover:scale-[1.02] transition-all">
+              BUY / LONG
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle: Dynamic Candlestick Chart (6 cols) -->
+        <div class="lg:col-span-6 flex flex-col space-y-4">
+          <!-- Canvas block -->
+          <div class="bg-obsidian-card rounded-2xl border border-white/5 p-4 flex flex-col justify-between h-[360px] relative">
+            <div class="flex items-center justify-between mb-3 z-10 relative">
+              <div class="flex items-center space-x-2">
+                <span id="chart-symbol-tag" class="font-heading font-black text-white text-base">EURUSD</span>
+                <span class="text-[10px] bg-neonBlue/10 text-neonBlue px-2 py-0.5 rounded border border-neonBlue/20 font-bold">1m Chart</span>
+              </div>
+              <div class="flex items-center space-x-1.5 text-xs text-gray-500 font-bold">
+                <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-pulse"></span>
+                <span id="chart-status-text">Simulating real-time feeds...</span>
+              </div>
+            </div>
+            <!-- Canvas Object -->
+            <div class="flex-grow w-full overflow-hidden relative min-h-[260px]">
+              <canvas id="live-trading-chart" class="w-full h-full block rounded-xl z-0"></canvas>
+            </div>
+          </div>
+
+          <!-- Session tracker clocks -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="glass-card rounded-xl p-3 border border-white/5 text-center flex items-center justify-between">
+              <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">London Session</span>
+              <span class="w-2 h-2 rounded-full bg-neonGreen shadow-glow-green"></span>
+            </div>
+            <div class="glass-card rounded-xl p-3 border border-white/5 text-center flex items-center justify-between">
+              <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">NY Session</span>
+              <span class="w-2 h-2 rounded-full bg-neonGreen shadow-glow-green"></span>
+            </div>
+            <div class="glass-card rounded-xl p-3 border border-white/5 text-center flex items-center justify-between">
+              <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Tokyo Session</span>
+              <span class="w-2 h-2 rounded-full bg-gray-600"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Verification Indicators (3 cols) -->
+        <div class="lg:col-span-3 bg-obsidian-card rounded-2xl border border-white/5 p-6 flex flex-col justify-between h-[520px]">
+          <div>
+            <h3 class="font-heading font-black text-white text-base border-b border-white/5 pb-3 mb-4">Risk Diagnostics</h3>
+            
+            <!-- Progress Meters -->
+            <div class="space-y-4">
+              <!-- Profit target gauge -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-semibold mb-1.5">
+                  <span class="text-gray-400">Profit Target Progress</span>
+                  <span id="gauge-target-pct" class="text-neonGreen">0%</span>
+                </div>
+                <div class="w-full h-2.5 bg-obsidian-light rounded-full overflow-hidden border border-white/5">
+                  <div id="gauge-target-bar" class="h-full bg-neonGreen transition-all duration-300 shadow-glow-green" style="width: 0%"></div>
+                </div>
+                <div class="flex justify-between items-center text-[10px] text-gray-500 mt-1">
+                  <span>Start</span>
+                  <span id="gauge-target-limit">Target: +$400.00</span>
+                </div>
+              </div>
+
+              <!-- Daily Drawdown gauge -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-semibold mb-1.5">
+                  <span class="text-gray-400">Daily Drawdown Status</span>
+                  <span id="gauge-daily-pct" class="text-neonRose">0%</span>
+                </div>
+                <div class="w-full h-2.5 bg-obsidian-light rounded-full overflow-hidden border border-white/5">
+                  <div id="gauge-daily-bar" class="h-full bg-neonRose transition-all duration-300 shadow-glow-rose" style="width: 0%"></div>
+                </div>
+                <div class="flex justify-between items-center text-[10px] text-gray-500 mt-1">
+                  <span id="gauge-daily-loss">$0.00 Loss</span>
+                  <span id="gauge-daily-limit">Max Loss: -$250.00</span>
+                </div>
+              </div>
+
+              <!-- Max Drawdown gauge -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-semibold mb-1.5">
+                  <span class="text-gray-400">Max Drawdown Status</span>
+                  <span id="gauge-max-pct" class="text-neonRose">0%</span>
+                </div>
+                <div class="w-full h-2.5 bg-obsidian-light rounded-full overflow-hidden border border-white/5">
+                  <div id="gauge-max-bar" class="h-full bg-neonRose transition-all duration-300 shadow-glow-rose" style="width: 0%"></div>
+                </div>
+                <div class="flex justify-between items-center text-[10px] text-gray-500 mt-1">
+                  <span id="gauge-max-loss">$0.00 Loss</span>
+                  <span id="gauge-max-limit">Max Loss: -$500.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI RISK COMPANION FEEDBACK -->
+          <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5 text-xs relative overflow-hidden mt-4">
+            <div class="flex items-center space-x-2 text-neonBlue font-heading font-bold mb-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              <span>AI COMPANION ANALYTICS</span>
+            </div>
+            <p id="ai-risk-text" class="text-gray-400 italic">No trading history recorded yet. Open a position to start calculating your behavioral safety profile.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Orders and Trade Journal Logs -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+        <!-- Open Orders (8 cols) -->
+        <div class="lg:col-span-8 bg-obsidian-card rounded-2xl border border-white/5 p-6 min-h-[250px]">
+          <h3 class="font-heading font-black text-white text-base border-b border-white/5 pb-3 mb-4 flex items-center justify-between">
+            <span>Active Positions</span>
+            <span id="active-positions-count" class="text-xs bg-neonBlue/10 text-neonBlue border border-neonBlue/20 font-bold px-2 py-0.5 rounded">0 Open</span>
+          </h3>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-400">
+              <thead class="text-xs text-gray-500 uppercase font-bold tracking-wider border-b border-white/5">
+                <tr>
+                  <th scope="col" class="py-3 px-4">Asset</th>
+                  <th scope="col" class="py-3 px-4">Type</th>
+                  <th scope="col" class="py-3 px-4">Lots</th>
+                  <th scope="col" class="py-3 px-4">Entry</th>
+                  <th scope="col" class="py-3 px-4">Current</th>
+                  <th scope="col" class="py-3 px-4">P&L</th>
+                  <th scope="col" class="py-3 px-4 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="active-positions-tbody">
+                <!-- Dynamic Rows Go Here -->
+                <tr>
+                  <td colspan="7" class="py-10 text-center text-gray-500 italic">No active positions open. Use the order ticket above to place trades.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Trade Journal (4 cols) -->
+        <div class="lg:col-span-4 bg-obsidian-card rounded-2xl border border-white/5 p-6 h-[250px] overflow-hidden flex flex-col justify-between">
+          <h3 class="font-heading font-black text-white text-base border-b border-white/5 pb-3 mb-2 flex items-center justify-between">
+            <span>Closed Journal Log</span>
+            <button onclick="clearSimHistory()" class="text-[10px] text-gray-500 hover:text-white uppercase font-bold tracking-wider">Reset Engine</button>
+          </h3>
+          <div id="journal-history-list" class="flex-grow overflow-y-auto space-y-2 py-2 pr-1">
+            <div class="text-center text-gray-500 text-xs italic py-8">No historical trades logged.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==============================================
+         3. PAYOUTS VIEW
+         ============================================== -->
+    <div id="view-payouts" class="view-section hidden max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-heading font-black text-white mb-2">WITHDRAWAL PAYOUT CENTER</h2>
+        <p class="text-gray-400 text-sm">Securely route and split your evaluation challenge profits.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Total Account Profits</span>
+          <strong id="payout-total-profit" class="text-white text-2xl font-heading font-black block">$0.00</strong>
+          <span class="text-[10px] text-gray-500 mt-1 block">Accumulated gross trading profit</span>
+        </div>
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Profit Split Share</span>
+          <strong id="payout-split-pct" class="text-neonGreen text-2xl font-heading font-black block">80% / 20%</strong>
+          <span class="text-[10px] text-gray-500 mt-1 block">Your commission ratio allocation</span>
+        </div>
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Withdrawable Balance</span>
+          <strong id="payout-withdrawable" class="text-neonBlue text-2xl font-heading font-black block">$0.00</strong>
+          <span class="text-[10px] text-gray-500 mt-1 block">Ready for immediate processing</span>
+        </div>
+      </div>
+
+      <!-- Main Payout panel -->
+      <div class="bg-obsidian-card rounded-2xl border border-white/5 p-8 shadow-xl">
+        <h3 class="font-heading font-black text-white text-lg mb-6 border-b border-white/5 pb-4">Request Withdrawal Payout</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <!-- Gateway selection -->
+          <div>
+            <label class="text-xs text-gray-400 font-bold block mb-2">Payout Method</label>
+            <select id="payout-gateway" onchange="changePayoutGateway()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-neonBlue">
+              <option value="USDT">Crypto (USDT TRC-20)</option>
+              <option value="BTC">Crypto (Bitcoin BTC Network)</option>
+              <option value="WIRE">International Bank Wire Transfer</option>
+            </select>
+          </div>
+
+          <!-- Destination address/details -->
+          <div>
+            <label id="payout-destination-label" class="text-xs text-gray-400 font-bold block mb-2">USDT Wallet Address</label>
+            <input id="payout-destination" type="text" placeholder="e.g. TXf4sP7..." class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-neonBlue">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-xs text-gray-400 font-bold block mb-2">Withdrawal Amount ($ USD)</label>
+          <div class="relative">
+            <span class="absolute left-4 top-3.5 text-gray-500 font-bold text-sm">$</span>
+            <input id="payout-amount" type="number" placeholder="0.00" class="w-full bg-obsidian-light rounded-xl border border-white/10 py-3.5 pl-8 pr-16 text-sm text-white font-bold focus:outline-none focus:border-neonBlue">
+            <button onclick="payoutSetMax()" class="absolute right-3 top-2.5 bg-neonBlue/10 hover:bg-neonBlue/20 text-neonBlue border border-neonBlue/20 font-bold text-xs py-1.5 px-3 rounded-lg">MAX</button>
+          </div>
+        </div>
+
+        <button onclick="submitPayoutRequest()" class="w-full py-4 bg-gradient-to-r from-neonBlue to-neonGreen hover:from-neonGreen hover:to-neonBlue text-obsidian font-heading font-black text-base rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.01] transition-all">
+          Request Payout Approval
+        </button>
+      </div>
+
+      <!-- Transaction Log -->
+      <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6 mt-8">
+        <h4 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Withdrawal Logs</h4>
+        <div id="payout-logs-list" class="space-y-3">
+          <div class="text-center py-6 text-gray-500 italic text-sm">No transaction records logged.</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==============================================
+         4. KYC VERIFICATION VIEW
+         ============================================== -->
+    <div id="view-kyc" class="view-section hidden max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-heading font-black text-white mb-2">AML & KYC COMPLIANCE SCANNER</h2>
+        <p class="text-gray-400 text-sm">Submit your documentation to activate real-time payouts verification checks.</p>
+      </div>
+
+      <div class="bg-obsidian-card rounded-2xl border border-white/5 p-8 relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-16 -right-16 w-36 h-36 bg-neonBlue/5 rounded-full blur-2xl"></div>
+
+        <!-- Steps Indicators -->
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/5 text-xs font-bold uppercase tracking-wider">
+          <span id="kyc-step-1-badge" class="text-neonBlue">01. Identity Details</span>
+          <span class="text-gray-600">• • •</span>
+          <span id="kyc-step-2-badge" class="text-gray-500">02. Document Scan</span>
+          <span class="text-gray-600">• • •</span>
+          <span id="kyc-step-3-badge" class="text-gray-500">03. Audit Validation</span>
+        </div>
+
+        <!-- STEP 1: Personal Info -->
+        <div id="kyc-form-step1" class="space-y-5">
+          <h3 class="font-heading font-bold text-white text-base">Personal Identification Details</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs text-gray-400 font-semibold block mb-1">First Name</label>
+              <input id="kyc-first-name" type="text" placeholder="John" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2 text-sm text-white focus:outline-none focus:border-neonBlue">
+            </div>
+            <div>
+              <label class="text-xs text-gray-400 font-semibold block mb-1">Last Name</label>
+              <input id="kyc-last-name" type="text" placeholder="Doe" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2 text-sm text-white focus:outline-none focus:border-neonBlue">
+            </div>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 font-semibold block mb-1">Address Details</label>
+            <input id="kyc-address" type="text" placeholder="102 Financial Center Ave, Wall Street NY" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2 text-sm text-white focus:outline-none focus:border-neonBlue">
+          </div>
+          <button onclick="kycGoToStep(2)" class="w-full py-3.5 bg-neonBlue hover:bg-neonGreen text-obsidian font-heading font-black text-sm rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.01] transition-all">
+            Continue to Upload
+          </button>
+        </div>
+
+        <!-- STEP 2: Document Selection & Scanning Mock -->
+        <div id="kyc-form-step2" class="hidden space-y-6">
+          <h3 class="font-heading font-bold text-white text-base">Scan Identity Document</h3>
+          
+          <div>
+            <label class="text-xs text-gray-400 font-bold block mb-2">Select Document Format</label>
+            <div class="grid grid-cols-3 gap-3">
+              <button onclick="selectKycDoc('passport')" id="btn-kyc-passport" class="py-2.5 rounded-lg text-xs font-bold transition-all text-white bg-white/5 border border-white/10">Passport</button>
+              <button onclick="selectKycDoc('license')" id="btn-kyc-license" class="py-2.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent">Driver's License</button>
+              <button onclick="selectKycDoc('national')" id="btn-kyc-national" class="py-2.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent">National ID</button>
+            </div>
+          </div>
+
+          <!-- Document Uploader box -->
+          <div class="relative w-full h-44 rounded-2xl border-2 border-dashed border-white/10 bg-obsidian-light/40 flex flex-col items-center justify-center cursor-pointer group hover:border-neonBlue/50 transition-all">
+            <!-- Scan laser overlay (simulated) -->
+            <div id="kyc-scanline" class="hidden absolute left-0 right-0 h-[2px] bg-neonGreen/60 shadow-glow-green scan-line"></div>
+            
+            <div id="kyc-upload-initial" class="text-center">
+              <svg class="w-10 h-10 text-gray-500 group-hover:text-neonBlue transition-all mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+              <span class="text-sm font-bold text-white block mb-1">Drag passport photo here</span>
+              <span class="text-[10px] text-gray-500 uppercase block tracking-wider">Format allowed: PNG, JPG, PDF</span>
+            </div>
+            <div id="kyc-upload-scanning" class="hidden text-center">
+              <span class="text-neonGreen text-sm font-black uppercase tracking-wider block animate-pulse">Running AML biometric scanner...</span>
+              <div class="w-32 h-1 bg-obsidian border border-white/5 rounded-full mx-auto mt-3 overflow-hidden">
+                <div class="h-full bg-neonGreen animate-[pulse_1s_infinite]" style="width: 50%"></div>
+              </div>
+            </div>
+            <div id="kyc-upload-completed" class="hidden text-center text-neonGreen">
+              <svg class="w-10 h-10 mx-auto mb-2 text-neonGreen shadow-glow-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm font-black uppercase tracking-widest block">Scan Capture Completed</span>
+            </div>
+            <!-- Hidden input -->
+            <input type="file" id="kyc-file-input" onchange="runSimulatedKycScan()" class="absolute inset-0 opacity-0 cursor-pointer">
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <button onclick="kycGoToStep(1)" class="w-1/3 py-3 bg-white/5 hover:bg-white/10 text-white font-bold text-sm rounded-xl">Back</button>
+            <button onclick="kycGoToStep(3)" id="btn-kyc-submit" class="w-2/3 py-3 bg-neonBlue hover:bg-neonGreen text-obsidian font-heading font-black text-sm rounded-xl shadow-glow-blue hover:shadow-glow-green transform hover:scale-[1.01] transition-all opacity-50 cursor-not-allowed" disabled>Submit File Verification</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Verification Audit -->
+        <div id="kyc-form-step3" class="hidden text-center space-y-6 py-6">
+          <div class="w-16 h-16 rounded-full bg-neonAmber/10 border border-neonAmber/20 flex items-center justify-center mx-auto text-neonAmber shadow-[0_0_15px_rgba(255,179,0,0.15)] animate-pulse">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-black text-white text-xl">Compliance Document in Review</h3>
+            <p class="text-gray-400 text-sm mt-2 max-w-sm mx-auto leading-relaxed">Your driver details are matching successfully. Compliance experts will finalize document details. Check the Admin Portal to override approvals.</p>
+          </div>
+          <div class="bg-obsidian-light p-4 rounded-xl border border-white/5 max-w-sm mx-auto text-left text-xs text-gray-500 space-y-1">
+            <div><strong class="text-gray-400">Account ID:</strong> <span id="kyc-final-id">HUX-7840132</span></div>
+            <div><strong class="text-gray-400">Scan Format:</strong> <span id="kyc-final-format">Passport</span></div>
+            <div><strong class="text-gray-400">Status:</strong> <span class="text-neonAmber font-bold">Pending Review</span></div>
+          </div>
+          <button onclick="switchTab('dashboard')" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-bold text-sm rounded-xl">Return to Terminal</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==============================================
+         5. AFFILIATE CENTER VIEW
+         ============================================== -->
+    <div id="view-affiliate" class="view-section hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-heading font-black text-white mb-2">HUX AFFILIATE SYSTEM</h2>
+        <p class="text-gray-400 text-sm">Promote HUX PROP FIRM. Commission splits up to 20% on all initial challenge buys.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Referral Clicks</span>
+          <strong id="aff-clicks" class="text-white text-2xl font-heading font-black block">1,402</strong>
+          <span class="text-[10px] text-neonBlue font-semibold mt-1 block">Clicks on custom links</span>
+        </div>
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Active Signups</span>
+          <strong id="aff-signups" class="text-white text-2xl font-heading font-black block">492</strong>
+          <span class="text-[10px] text-neonGreen font-semibold mt-1 block">Registered referral accounts</span>
+        </div>
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <span class="text-gray-500 text-xs font-bold block uppercase tracking-wider mb-1">Commissions Earned</span>
+          <strong id="aff-comm" class="text-neonGreen text-2xl font-heading font-black block">$1,240.00</strong>
+          <span class="text-[10px] text-gray-500 mt-1 block">Split payouts ready in Payout portal</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Referral URL Link card -->
+        <div class="lg:col-span-1 bg-obsidian-card rounded-2xl border border-white/5 p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Link Generator</h3>
+            <label class="text-xs text-gray-400 font-semibold block mb-2">Custom Partner Slug</label>
+            <div class="flex items-center space-x-2">
+              <input id="aff-slug" type="text" value="TRADER784" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-neonBlue">
+            </div>
+            <p class="text-[10px] text-gray-500 mt-2 leading-relaxed">Customize your referral suffix to align with your channels and social media presence.</p>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-xs text-gray-400 font-bold block mb-1">Referral Link URL</label>
+            <div class="bg-obsidian-light px-3 py-2.5 rounded-xl border border-white/10 flex items-center justify-between text-xs overflow-hidden">
+              <span id="aff-url-link" class="text-neonBlue select-all truncate mr-2">huxprop.com/ref?id=TRADER784</span>
+              <button onclick="copyAffLink()" class="text-gray-400 hover:text-white uppercase font-bold text-[10px]">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commissions Tier list -->
+        <div class="lg:col-span-2 bg-obsidian-card rounded-2xl border border-white/5 p-6">
+          <h3 class="font-heading font-bold text-white text-base mb-6 border-b border-white/5 pb-3">Referral Tier Structure</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-obsidian-light/60 p-4 rounded-xl border border-neonBlue/20 shadow-glow-blue flex items-center justify-between">
+              <div>
+                <strong class="text-white text-sm block">Bronze Partner (Tier 01)</strong>
+                <span class="text-xs text-gray-500 block">Default tier for verified accounts</span>
+              </div>
+              <strong class="text-neonBlue text-lg font-heading font-black">10% Split</strong>
+            </div>
+            <div class="bg-obsidian-light/30 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+              <div>
+                <strong class="text-gray-400 text-sm block">Silver Affiliate (Tier 02)</strong>
+                <span class="text-xs text-gray-500 block">Unlocks after $5,000 gross commissions</span>
+              </div>
+              <strong class="text-gray-500 text-lg font-heading font-black">15% Split</strong>
+            </div>
+            <div class="bg-obsidian-light/30 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+              <div>
+                <strong class="text-gray-400 text-sm block">Gold Influencer (Tier 03)</strong>
+                <span class="text-xs text-gray-500 block">Unlocks after $20,000 gross commissions</span>
+              </div>
+              <strong class="text-gray-500 text-lg font-heading font-black">20% Split</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==============================================
+         6. ADMIN CONTROL CENTER VIEW
+         ============================================= -->
+    <div id="view-admin" class="view-section hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- ADMIN COMPLIANCE AUTHENTICATION SHIELD GATE -->
+      <div id="admin-lock-screen" class="max-w-md mx-auto py-8">
+        <div class="glass-card rounded-2xl border border-neonRose/20 p-8 shadow-glow-rose text-center relative overflow-hidden">
+          <div class="absolute -top-16 -right-16 w-36 h-36 bg-neonRose/5 rounded-full blur-2xl"></div>
+          
+          <div class="w-16 h-16 rounded-full bg-neonRose/10 border border-neonRose/20 flex items-center justify-center mx-auto text-neonRose shadow-glow-rose mb-6 animate-pulse">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          
+          <h3 class="font-heading font-black text-white text-xl tracking-wider">RESTRICTED TERMINAL</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">Admin credential signature required. Access log traces are encrypted in system audit ledgers.</p>
+          
+          <div class="mt-6 space-y-4">
+            <div>
+              <label class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block text-left mb-1.5">Enter Admin Passcode</label>
+              <input id="admin-lock-pass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter') submitAdminAuth()" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-4 py-3 text-center text-white tracking-widest focus:outline-none focus:border-neonRose focus:shadow-glow-rose">
+            </div>
+            
+            <span id="admin-lock-error" class="hidden text-neonRose text-[10px] font-bold block uppercase tracking-wider animate-pulse">Invalid administrative passcode signature.</span>
+            
+            <button onclick="submitAdminAuth()" class="w-full py-3 bg-neonRose hover:bg-neonRose/90 text-white font-heading font-black text-sm rounded-xl shadow-glow-rose transform hover:scale-[1.01] transition-all">
+              Authorize Terminal
+            </button>
+            
+            <div class="border-t border-white/5 my-4 pt-4">
+              <span class="text-[10px] text-gray-600 block mb-2 uppercase font-bold tracking-widest">Biometric Security Override</span>
+              <button onclick="runAdminBiometric()" id="btn-admin-bio" class="w-full py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold border border-white/10 rounded-xl flex items-center justify-center space-x-2 text-gray-400 hover:text-white">
+                <svg class="w-4 h-4 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11a13.918 13.918 0 00-6.125-11.538M3.57 18.06c-.956-.372-1.92-.81-2.887-1.309M21 11c0 2.268-.423 4.437-1.196 6.442M16 11c0 1.242-.233 2.43-.656 3.525M17.25 18c-.896-.36-1.785-.765-2.67-1.206M12 5a3 3 0 11-6 0 3 3 0 016 0zm0 0c.346.828.538 1.733.538 2.686 0 2.829-1.98 5.199-4.643 5.778"/></svg>
+                <span>Biometric Signature Scan</span>
+              </button>
+            </div>
+            
+            <p class="text-[9px] text-gray-600 leading-relaxed italic">Default Credentials: Enter <strong>"admin"</strong> or run the mock biometric scanner override.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN SECURE ADMIN PANEL CONTENT (Initially Hidden) -->
+      <div id="admin-main-content" class="hidden">
+        
+        <!-- Top KPIs -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div class="glass-card rounded-xl p-4 border border-white/5">
+            <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Gross Challenge Sales</span>
+            <strong id="admin-kpi-sales" class="text-white text-lg font-heading font-black block mt-1">$424,950.00</strong>
+          </div>
+          <div class="glass-card rounded-xl p-4 border border-white/5">
+            <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Payouts Paid</span>
+            <strong id="admin-kpi-payouts" class="text-neonGreen text-lg font-heading font-black block mt-1">$142,210.00</strong>
+          </div>
+          <div class="glass-card rounded-xl p-4 border border-white/5">
+            <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Daily System Tick Rate</span>
+            <strong class="text-neonBlue text-lg font-heading font-black block mt-1">1,241 ms</strong>
+          </div>
+          <div class="glass-card rounded-xl p-4 border border-white/5">
+            <span class="text-gray-500 text-xs font-semibold block uppercase tracking-wider">Active Breached Accounts</span>
+            <strong id="admin-kpi-breaches" class="text-neonRose text-lg font-heading font-black block mt-1">0 Accounts</strong>
+          </div>
+        </div>
+
+        <!-- Main Manager Console layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Accounts monitoring (8 cols) -->
+          <div class="lg:col-span-8 bg-obsidian-card rounded-2xl border border-white/5 p-6 min-h-[350px]">
+            <h3 class="font-heading font-black text-white text-base border-b border-white/5 pb-3 mb-4 flex items-center justify-between">
+              <span>Platform Active Traders Monitor</span>
+              <span class="text-xs bg-neonRose/10 text-neonRose border border-neonRose/20 font-bold px-2 py-0.5 rounded">Live Audit Feed</span>
+            </h3>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-500 uppercase font-bold tracking-wider border-b border-white/5">
+                  <tr>
+                    <th scope="col" class="py-3 px-4">Account ID</th>
+                    <th scope="col" class="py-3 px-4">Format</th>
+                    <th scope="col" class="py-3 px-4">Virtual Balance</th>
+                    <th scope="col" class="py-3 px-4">Virtual Equity</th>
+                    <th scope="col" class="py-3 px-4">PnL</th>
+                    <th scope="col" class="py-3 px-4">Verification</th>
+                    <th scope="col" class="py-3 px-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-accounts-tbody">
+                  <!-- Loaded dynamically by HuxEngine -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Overrides Controls Panel (4 cols) -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Manual override utilities -->
+            <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+              <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">Override Panel</h3>
+              
+              <div class="space-y-3">
+                <div>
+                  <label class="text-[10px] text-gray-400 font-bold uppercase block mb-1">Target Account ID</label>
+                  <input id="admin-target-id" type="text" placeholder="e.g. HUX-7840132" class="w-full bg-obsidian-light rounded-xl border border-white/10 px-3.5 py-2 text-xs text-white">
+                </div>
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                  <button onclick="adminTriggerPass()" class="py-2.5 bg-neonGreen hover:bg-neonGreen/80 text-obsidian font-heading font-bold text-xs rounded-xl">Force Pass</button>
+                  <button onclick="adminTriggerFail()" class="py-2.5 bg-neonRose hover:bg-neonRose/80 text-white font-heading font-bold text-xs rounded-xl">Force Breach</button>
+                </div>
+                <button onclick="adminResetBalance()" class="w-full py-2.5 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-heading font-bold text-xs rounded-xl mt-1">
+                  Reset Initial Account Sizing
+                </button>
+              </div>
+            </div>
+
+            <!-- KYC Approvals Monitor -->
+            <div class="bg-obsidian-card rounded-2xl border border-white/5 p-6">
+              <h3 class="font-heading font-bold text-white text-base mb-4 border-b border-white/5 pb-3">KYC Auditing Queue</h3>
+              <div class="space-y-4">
+                <div class="bg-obsidian-light/60 p-3.5 rounded-xl border border-white/5 flex items-center justify-between text-xs">
+                  <div>
+                    <strong class="text-white block" id="admin-kyc-name">John Doe (HUX-7840132)</strong>
+                    <span class="text-gray-500 block mt-0.5" id="admin-kyc-type">Passport verification</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <button onclick="adminApproveKyc()" class="px-2.5 py-1 bg-neonGreen/10 hover:bg-neonGreen/20 text-neonGreen border border-neonGreen/20 font-bold rounded">Approve</button>
+                  </div>
+                </div>
+                <p class="text-[10px] text-gray-500 leading-relaxed">Auto-scanned documentation is validated against sanctions lists. Click to trigger manual KYC approval overrides.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SYSTEM COMPLIANCE FOOTER -->
+  <footer class="glass-card border-t border-white/5 bg-obsidian-light/40 py-8 z-10 text-xs text-gray-500 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div>
+        <p>&copy; 2026 <strong>HUX PROP FIRM Ltd</strong>. All rights reserved. AML, GDPR, and KYC regulatory checks are simulated with authentic precision.</p>
+        <p class="mt-1 text-[10px] text-gray-600">Trading involves significant risk. The challenges, analytics, drawdowns, and payouts listed within this environment are for high-fidelity demonstration and software audit purposes.</p>
+      </div>
+      <div class="flex space-x-4 text-gray-400 font-bold uppercase tracking-widest">
+        <a href="#" onclick="switchTab('landing')" class="hover:text-neonBlue">Terms</a>
+        <span>&bull;</span>
+        <a href="#" onclick="switchTab('kyc')" class="hover:text-neonBlue">Privacy</a>
+        <span>&bull;</span>
+        <a href="#" onclick="switchTab('admin')" class="hover:text-neonRose border-b border-dashed border-neonRose/40">Secure Audit Terminal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       HUX ENGINE JAVASCRIPT STATE CORE
+       ============================================== -->
+  <script>
+    // System LocalStorage Key
+    const DB_KEY = "hux_prop_firm_db";
+
+    // Initial Engine DB State Default
+    const defaultDB = {
+      payoutsSales: 424950.00,
+      payoutsPaid: 142210.00,
+      accounts: [
+        {
+          id: "HUX-7840132",
+          initialSize: 5000,
+          balance: 5000.00,
+          equity: 5000.00,
+          maxEquity: 5000.00,
+          dailyBase: 5000.00,
+          mode: "1-step",
+          status: "active", // active, passed, breached
+          pnl: 0.00,
+          trades: [],
+          kycStatus: "pending" // none, pending, approved
+        }
+      ],
+      affClicks: 1402,
+      affSignups: 492,
+      affComm: 1240.00,
+      activeAccountId: "HUX-7840132",
+      payoutRequests: []
+    };
+
+    let DB = JSON.parse(localStorage.getItem(DB_KEY)) || defaultDB;
+
+    function saveState() {
+      localStorage.setItem(DB_KEY, JSON.stringify(DB));
+    }
+
+    // Active Challenge Pricing Selections
+    let activePricingMode = "1-step";
+    let activePricingSize = 5000;
+
+    const pricingMeta = {
+      "1-step": {
+        "5000": { fee: 49, target: 400, daily: 250, max: 500, days: 3 },
+        "10000": { fee: 89, target: 800, daily: 500, max: 1000, days: 3 },
+        "25000": { fee: 189, target: 2000, daily: 1250, max: 2500, days: 3 },
+        "50000": { fee: 299, target: 4000, daily: 2500, max: 5000, days: 3 },
+        "100000": { fee: 499, target: 8000, daily: 5000, max: 10000, days: 3 },
+        "200000": { fee: 949, target: 16000, daily: 10000, max: 20000, days: 3 }
+      },
+      "2-step": {
+        "5000": { fee: 59, target: 500, daily: 250, max: 500, days: 5 },
+        "10000": { fee: 99, target: 1000, daily: 500, max: 1000, days: 5 },
+        "25000": { fee: 199, target: 2500, daily: 1250, max: 2500, days: 5 },
+        "50000": { fee: 349, target: 5000, daily: 2500, max: 5000, days: 5 },
+        "100000": { fee: 549, target: 10000, daily: 5000, max: 10000, days: 5 },
+        "200000": { fee: 999, target: 20000, daily: 10000, max: 20000, days: 5 }
+      },
+      "instant": {
+        "5000": { fee: 99, target: 0, daily: 250, max: 250, days: 0 },
+        "10000": { fee: 189, target: 0, daily: 500, max: 500, days: 0 },
+        "25000": { fee: 389, target: 0, daily: 1250, max: 1250, days: 0 },
+        "50000": { fee: 699, target: 0, daily: 2500, max: 2500, days: 0 },
+        "100000": { fee: 1299, target: 0, daily: 5000, max: 5000, days: 0 },
+        "200000": { fee: 2499, target: 0, daily: 10000, max: 10000, days: 0 }
+      }
+    };
+
+    // Live Tick Feeds
+    const assetsData = {
+      EURUSD: { price: 1.0825, spread: 0.0002, speed: 0.0003, point: 4 },
+      GBPUSD: { price: 1.2740, spread: 0.0003, speed: 0.0004, point: 4 },
+      BTCUSD: { price: 68450.00, spread: 5.00, speed: 12.00, point: 2 },
+      XAUUSD: { price: 2351.40, spread: 0.20, speed: 0.50, point: 2 }
+    };
+    let currentAsset = "EURUSD";
+
+    // Charting core Variables
+    let chartCanvas, ctx;
+    let priceHistory = [];
+    const maxHistoryPoints = 80;
+
+    // Open positions tracking state
+    let openPositions = [];
+
+    // Initialize systems
+    window.onload = function() {
+      // Setup canvas
+      chartCanvas = document.getElementById("live-trading-chart");
+      ctx = chartCanvas.getContext("2d");
+      resizeChartCanvas();
+      window.addEventListener("resize", resizeChartCanvas);
+
+      // Pre-fill price history
+      let baseVal = assetsData[currentAsset].price;
+      for (let i = 0; i < maxHistoryPoints; i++) {
+        baseVal += (Math.random() - 0.5) * assetsData[currentAsset].speed;
+        priceHistory.push({
+          open: baseVal,
+          high: baseVal + Math.random() * assetsData[currentAsset].speed,
+          low: baseVal - Math.random() * assetsData[currentAsset].speed,
+          close: baseVal + (Math.random() - 0.5) * assetsData[currentAsset].speed
+        });
+      }
+
+      // Initialize UI inputs & dashboard
+      selectPricingMode("1-step");
+      selectPricingSize(5000);
+      renderDashboard();
+      renderAffiliate();
+      renderPayouts();
+      renderAdmin();
+
+      // Begin Tick Loops
+      setInterval(runTick, 1000);
+    };
+
+    function resizeChartCanvas() {
+      if (chartCanvas) {
+        chartCanvas.width = chartCanvas.parentElement.clientWidth;
+        chartCanvas.height = chartCanvas.parentElement.clientHeight;
+      }
+    }
+
+    // Tab switcher
+    function switchTab(viewName) {
+      document.querySelectorAll(".view-section").forEach(sec => {
+        sec.classList.add("hidden");
+      });
+      document.getElementById("view-" + viewName).classList.remove("hidden");
+
+      // Highlight active nav buttons
+      document.querySelectorAll("nav button").forEach(btn => {
+        btn.className = "px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5";
+      });
+      // Edge cases for admin dash border highlight
+      document.getElementById("nav-admin").className = "px-4 py-2 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-dashed border-neonRose/20 hover:border-neonRose/50";
+      
+      const activeBtn = document.getElementById("nav-" + viewName);
+      if (activeBtn) {
+        if (viewName === 'admin') {
+          activeBtn.className = "px-4 py-2 rounded-lg text-sm font-medium transition-all text-white bg-neonRose/10 border border-dashed border-neonRose";
+        } else {
+          activeBtn.className = "px-4 py-2 rounded-lg text-sm font-medium transition-all text-white bg-white/10 border border-white/5";
+        }
+      }
+
+      // Ensure canvas adjusts and draws immediately when switching to the Trader Terminal
+      if (viewName === 'dashboard') {
+        setTimeout(() => {
+          resizeChartCanvas();
+          drawCanvasChart();
+        }, 50);
+      }
+    }
+
+    // Scroll helper
+    function smoothScrollTo(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Faq accordion
+    function toggleFaq(index) {
+      const ans = document.getElementById("faq-ans-" + index);
+      const icon = document.getElementById("faq-icon-" + index);
+      if (ans.classList.contains("hidden")) {
+        ans.classList.remove("hidden");
+        icon.style.transform = "rotate(180deg)";
+      } else {
+        ans.classList.add("hidden");
+        icon.style.transform = "rotate(0deg)";
+      }
+    }
+
+    // Pricing Selector Logics
+    function selectPricingMode(mode) {
+      activePricingMode = mode;
+      
+      // Update styling
+      document.querySelectorAll("#pricing-section button[id^='btn-mode-']").forEach(btn => {
+        btn.className = "px-5 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white";
+      });
+      const activeModeBtn = document.getElementById("btn-mode-" + (mode === '1-step' ? '1' : mode === '2-step' ? '2' : 'instant'));
+      if (activeModeBtn) {
+        activeModeBtn.className = "px-5 py-2.5 rounded-lg text-sm font-bold transition-all text-white bg-white/10";
+      }
+
+      updatePricingCard();
+    }
+
+    function selectPricingSize(size) {
+      activePricingSize = size;
+      
+      // Update style highlights
+      document.querySelectorAll("#pricing-section button[id^='btn-size-']").forEach(btn => {
+        btn.className = "w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent";
+      });
+      const keyMap = { 5000: '5k', 10000: '10k', 25000: '25k', 50000: '50k', 100000: '100k', 200000: '200k' };
+      const activeSizeBtn = document.getElementById("btn-size-" + keyMap[size]);
+      if (activeSizeBtn) {
+        activeSizeBtn.className = "w-full text-left px-4 py-3.5 rounded-xl font-bold transition-all text-white bg-white/5 border border-white/10 flex items-center justify-between";
+      }
+
+      updatePricingCard();
+    }
+
+    function updatePricingCard() {
+      const entry = pricingMeta[activePricingMode][activePricingSize];
+      
+      document.getElementById("price-card-tier").innerText = activePricingMode.replace('-', ' ') + " mode";
+      document.getElementById("price-card-fee").innerText = "$" + entry.fee;
+      
+      const keyMap = { 5000: '$5,000', 10000: '$10,000', 25000: '$25,000', 50000: '$50,000', 100000: '$100,000', 200000: '$200,000' };
+      document.getElementById("price-card-size").innerText = keyMap[activePricingSize];
+
+      if (entry.target === 0) {
+        document.getElementById("price-card-target").innerText = "No Target";
+        document.getElementById("price-card-target").className = "text-neonBlue text-xl font-heading font-bold block mt-1";
+      } else {
+        document.getElementById("price-card-target").innerText = "+$" + entry.target.toFixed(2) + " (" + ((entry.target/activePricingSize)*100) + "%)";
+        document.getElementById("price-card-target").className = "text-neonGreen text-xl font-heading font-bold block mt-1";
+      }
+
+      document.getElementById("price-card-daily").innerText = "-$" + entry.daily.toFixed(2) + " (5%)";
+      document.getElementById("price-card-max").innerText = "-$" + entry.max.toFixed(2) + " (" + ((entry.max/activePricingSize)*100) + "%)";
+      document.getElementById("price-card-days").innerText = entry.days === 0 ? "No minimum" : entry.days + " Days";
+    }
+
+    // Purchases simulation configurator (FundedNext Style Redirect)
+    let activeCheckoutSwap = "standard";
+    let activePaymentMethod = "card";
+    let isCouponApplied = false;
+
+    // Track active add-ons
+    let activeAddons = {
+      'profit-split': false,
+      'biweekly': false,
+      'no-min-days': false
+    };
+
+    function buyChallenge() {
+      // Reset addons on new configuration load
+      activeAddons = {
+        'profit-split': false,
+        'biweekly': false,
+        'no-min-days': false
+      };
+      
+      // Update checkbox visual states
+      document.getElementById("chk-addon-profit-split").checked = false;
+      document.getElementById("chk-addon-biweekly").checked = false;
+      document.getElementById("chk-addon-no-min-days").checked = false;
+      
+      document.getElementById("addon-row-profit-split").className = "p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all";
+      document.getElementById("addon-row-biweekly").className = "p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all";
+      document.getElementById("addon-row-no-min-days").className = "p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all";
+
+      switchTab('checkout');
+      
+      // Update config parameters
+      updateCheckoutSummary();
+      
+      // Pre-apply coupon code from query links (e.g. EIDFNC)
+      document.getElementById("checkout-coupon").value = "EIDFNC";
+      applyCheckoutCoupon();
+      
+      triggerToast("Configuring Plan Options", "Staging HUX Stellar challenge billing pipeline. Adjust custom parameters.");
+    }
+
+    function toggleCheckoutAddon(addonKey) {
+      activeAddons[addonKey] = !activeAddons[addonKey];
+      
+      const chk = document.getElementById("chk-addon-" + addonKey);
+      const row = document.getElementById("addon-row-" + addonKey);
+      
+      chk.checked = activeAddons[addonKey];
+      
+      if (activeAddons[addonKey]) {
+        row.className = "p-4 rounded-xl border border-neonBlue/40 bg-neonBlue/5 flex items-center justify-between cursor-pointer transition-all shadow-glow-blue";
+      } else {
+        row.className = "p-4 rounded-xl border border-white/5 hover:border-white/20 bg-obsidian-light/30 flex items-center justify-between cursor-pointer transition-all";
+      }
+
+      updateCheckoutSummary();
+    }
+
+    function selectCheckoutSwap(type) {
+      activeCheckoutSwap = type;
+      document.getElementById("btn-swap-standard").className = type === 'standard' 
+        ? "py-2.5 rounded-xl text-xs font-bold transition-all text-white bg-white/10 border border-white/10"
+        : "py-2.5 rounded-xl text-xs font-bold transition-all text-gray-400 border border-transparent";
+      document.getElementById("btn-swap-free").className = type === 'swap-free' 
+        ? "py-2.5 rounded-xl text-xs font-bold transition-all text-white bg-white/10 border border-white/10"
+        : "py-2.5 rounded-xl text-xs font-bold transition-all text-gray-400 border border-transparent";
+
+      updateCheckoutSummary();
+    }
+
+    function selectPaymentMethod(method) {
+      activePaymentMethod = method;
+      document.getElementById("btn-pay-card").className = method === 'card'
+        ? "py-3 bg-neonBlue/10 text-neonBlue border border-neonBlue/20 font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2"
+        : "py-3 bg-white/5 text-gray-400 border border-transparent hover:text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2";
+      document.getElementById("btn-pay-crypto").className = method === 'crypto'
+        ? "py-3 bg-neonGreen/10 text-neonGreen border border-neonGreen/20 font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2"
+        : "py-3 bg-white/5 text-gray-400 border border-transparent hover:text-white font-heading font-bold text-xs rounded-xl flex items-center justify-center space-x-2";
+
+      if (method === 'card') {
+        document.getElementById("payment-panel-card").classList.remove("hidden");
+        document.getElementById("payment-panel-crypto").classList.add("hidden");
+      } else {
+        document.getElementById("payment-panel-card").classList.add("hidden");
+        document.getElementById("payment-panel-crypto").classList.remove("hidden");
+      }
+    }
+
+    function updateCheckoutSummary() {
+      const entry = pricingMeta[activePricingMode][activePricingSize];
+      
+      const formatStr = activePricingMode === '1-step' ? 'Stellar 1-Step Fast' : activePricingMode === '2-step' ? 'Stellar 2-Step Standard' : 'Stellar Instant Funding';
+      document.getElementById("summary-format").innerText = formatStr;
+      
+      const sizeStr = "$" + activePricingSize.toLocaleString('en-US') + ".00";
+      document.getElementById("summary-size").innerText = sizeStr;
+      
+      const platformSelect = document.getElementById("checkout-platform").value;
+      document.getElementById("summary-platform").innerText = platformSelect.toUpperCase().replace('_', ' ');
+      
+      const swapStr = activeCheckoutSwap === 'standard' ? 'Standard (Swap)' : 'Swap-Free (Islamic)';
+      document.getElementById("summary-swap").innerText = swapStr;
+
+      // Base fee
+      document.getElementById("checkout-base-fee").innerText = "$" + entry.fee.toFixed(2);
+      
+      // Update totals
+      calculateFinalCheckoutPrice();
+    }
+
+    function applyCheckoutCoupon() {
+      const code = document.getElementById("checkout-coupon").value.trim().toUpperCase();
+      const successMsg = document.getElementById("coupon-success-msg");
+      const discountRow = document.getElementById("checkout-discount-row");
+
+      if (code === "EIDFNC") {
+        isCouponApplied = true;
+        successMsg.classList.remove("hidden");
+        discountRow.classList.remove("hidden");
+      } else {
+        isCouponApplied = false;
+        successMsg.classList.add("hidden");
+        discountRow.classList.add("hidden");
+      }
+
+      calculateFinalCheckoutPrice();
+    }
+
+    function calculateFinalCheckoutPrice() {
+      const entry = pricingMeta[activePricingMode][activePricingSize];
+      let baseFee = entry.fee;
+      
+      // Add addon charges (+20% for 95% split, +10% for biweekly, +10% for no min days)
+      let addonCharges = 0;
+      if (activeAddons['profit-split']) {
+        addonCharges += baseFee * 0.20;
+      }
+      if (activeAddons['biweekly']) {
+        addonCharges += baseFee * 0.10;
+      }
+      if (activeAddons['no-min-days']) {
+        addonCharges += baseFee * 0.10;
+      }
+
+      let subtotal = baseFee + addonCharges;
+      let discount = 0;
+
+      if (isCouponApplied) {
+        // Discount applies to total price including addons
+        discount = subtotal * 0.1;
+        document.getElementById("checkout-discount-val").innerText = "-$" + discount.toFixed(2);
+      }
+
+      const total = subtotal - discount;
+      document.getElementById("checkout-total-price").innerText = "$" + total.toFixed(2);
+    }
+
+    function updateCardMockup() {
+      const numInput = document.getElementById("checkout-card-num").value;
+      const nameInput = document.getElementById("checkout-card-name").value;
+      const expInput = document.getElementById("checkout-card-exp").value;
+
+      document.getElementById("card-mock-number").innerText = numInput || "•••• •••• •••• ••••";
+      document.getElementById("card-mock-name").innerText = nameInput ? nameInput.toUpperCase() : "YOUR FULL NAME";
+      document.getElementById("card-mock-expiry").innerText = expInput || "MM/YY";
+    }
+
+    function copyCryptoAddress() {
+      const address = document.getElementById("crypto-address").innerText;
+      navigator.clipboard.writeText(address);
+      triggerToast("Address Copied", "Simulated Tether TRC-20 wallet address copied to clipboard.");
+    }
+
+    // Execute Payment Checkout Loader & promote challenge
+    function completePaymentCheckout() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      const entry = pricingMeta[activePricingMode][activePricingSize];
+      
+      // Calculate final pricing including active addons
+      let baseFee = entry.fee;
+      let addonCharges = 0;
+      if (activeAddons['profit-split']) addonCharges += baseFee * 0.20;
+      if (activeAddons['biweekly']) addonCharges += baseFee * 0.10;
+      if (activeAddons['no-min-days']) addonCharges += baseFee * 0.10;
+      
+      const subtotal = baseFee + addonCharges;
+      const finalPrice = isCouponApplied ? (subtotal * 0.9) : subtotal;
+
+      // Validate inputs
+      const email = document.getElementById("checkout-email").value;
+      const name = document.getElementById("checkout-first-name").value;
+      if (!name || !email) {
+        triggerToast("Form Incomplete", "Please input billing details (First Name and Email) to proceed.");
+        return;
+      }
+
+      // Visual Payment Loader simulation overlay
+      const overlay = document.createElement("div");
+      overlay.className = "fixed inset-0 z-[100] flex flex-col items-center justify-center bg-obsidian/90 backdrop-blur-xl text-center select-none";
+      overlay.innerHTML = `
+        <div class="glass-card rounded-2xl border border-neonBlue/20 p-8 shadow-glow-blue max-w-sm">
+          <span class="w-12 h-12 rounded-full border-4 border-neonBlue border-t-transparent animate-spin block mx-auto mb-6 shadow-glow-blue"></span>
+          <h3 id="loader-title" class="font-heading font-black text-white text-lg tracking-widest uppercase">SECURE PAYMENT IN PROCESS</h3>
+          <p id="loader-desc" class="text-xs text-gray-500 mt-2 leading-relaxed">Bridging credit gateways to Stripe servers...</p>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+
+      // Multi-step loader updates
+      setTimeout(() => {
+        document.getElementById("loader-title").innerText = "Biometrics & AML Auditing";
+        document.getElementById("loader-desc").innerText = "Scanning billing profiles against international compliance checks...";
+      }, 1000);
+
+      setTimeout(() => {
+        document.getElementById("loader-title").innerText = "Spawning Account Bridges";
+        document.getElementById("loader-title").className = "font-heading font-black text-neonGreen text-lg tracking-widest uppercase shadow-glow-green";
+        document.getElementById("loader-desc").innerText = "Creating active MT5 login credentials on HUX broker servers...";
+      }, 2000);
+
+      setTimeout(() => {
+        // Remove overlay
+        document.body.removeChild(overlay);
+
+        // Update database account parameters
+        activeAcct.initialSize = activePricingSize;
+        activeAcct.balance = activePricingSize;
+        activeAcct.equity = activePricingSize;
+        activeAcct.maxEquity = activePricingSize;
+        activeAcct.dailyBase = activePricingSize;
+        activeAcct.mode = activePricingMode;
+        activeAcct.status = "active";
+        activeAcct.pnl = 0.00;
+        activeAcct.trades = [];
+        openPositions = [];
+
+        // Save selected add-on constraints onto active account object
+        activeAcct.addons = {
+          profitSplit: activeAddons['profit-split'] ? 95 : 80,
+          biweekly: activeAddons['biweekly'],
+          noMinDays: activeAddons['no-min-days']
+        };
+
+        // Adjust trading minimum days rules accordingly
+        if (activeAddons['no-min-days']) {
+          activeAcct.minTradingDays = 0;
+        }
+
+        DB.payoutsSales += finalPrice;
+        saveState();
+
+        renderDashboard();
+        renderAdmin();
+        switchTab("dashboard");
+
+        // Force reload gauges/payout labels to reflect new split
+        renderPayouts();
+
+        triggerToast("Payment Confirmed! ⚡", "Billing signature authenticated. HUX " + (activePricingSize/1000) + "K accounts bridge activated successfully!");
+      }, 3500);
+    }
+
+    // Trader Dashboard logic inputs
+    function changeAssetSymbol() {
+      currentAsset = document.getElementById("order-asset").value;
+      document.getElementById("chart-symbol-tag").innerText = currentAsset;
+      
+      // Update bid/ask ticker
+      const data = assetsData[currentAsset];
+      document.getElementById("ticker-bid").innerText = data.price.toFixed(data.point);
+      document.getElementById("ticker-ask").innerText = (data.price + data.spread).toFixed(data.point);
+    }
+
+    function modifyLots(direction) {
+      let lotVal = parseFloat(document.getElementById("order-lots").value);
+      lotVal += direction * 0.1;
+      if (lotVal < 0.1) lotVal = 0.1;
+      if (lotVal > 50.0) lotVal = 50.0;
+      document.getElementById("order-lots").value = lotVal.toFixed(1);
+    }
+
+    // Place simulated trade orders
+    function placeOrder(type) {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      if (activeAcct.status === "breached") {
+        triggerToast("Execution Rejected", "Current account is in breached status. Reset challenge via the Admin Panel.");
+        return;
+      }
+      
+      const asset = currentAsset;
+      const lots = parseFloat(document.getElementById("order-lots").value);
+      const priceMeta = assetsData[asset];
+      const entryPrice = type === 'BUY' ? (priceMeta.price + priceMeta.spread) : priceMeta.price;
+      
+      const slVal = document.getElementById("order-sl").value ? parseFloat(document.getElementById("order-sl").value) : null;
+      const tpVal = document.getElementById("order-tp").value ? parseFloat(document.getElementById("order-tp").value) : null;
+
+      const newPos = {
+        id: "POS-" + Math.floor(Math.random() * 900000 + 100000),
+        asset: asset,
+        type: type,
+        lots: lots,
+        entryPrice: entryPrice,
+        currentPrice: entryPrice,
+        sl: slVal,
+        tp: tpVal,
+        pnl: 0.00
+      };
+
+      openPositions.push(newPos);
+      renderActivePositions();
+      triggerToast("Order Executed", type + " " + lots + " lots " + asset + " at " + entryPrice.toFixed(priceMeta.point));
+    }
+
+    // Close position
+    function closePosition(posId) {
+      const posIndex = openPositions.findIndex(p => p.id === posId);
+      if (posIndex === -1) return;
+
+      const pos = openPositions[posIndex];
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      
+      // Realize profits/losses onto simulated bank roll balances
+      activeAcct.balance += pos.pnl;
+      activeAcct.pnl = activeAcct.balance - activeAcct.initialSize;
+      
+      // Log historical journal entry
+      const closeLog = {
+        id: pos.id,
+        asset: pos.asset,
+        type: pos.type,
+        lots: pos.lots,
+        entryPrice: pos.entryPrice,
+        closePrice: pos.currentPrice,
+        pnl: pos.pnl,
+        time: new Date().toLocaleTimeString()
+      };
+      
+      activeAcct.trades.unshift(closeLog);
+      openPositions.splice(posIndex, 1);
+      
+      saveState();
+      renderActivePositions();
+      renderDashboard();
+      renderAdmin();
+
+      triggerToast("Position Closed", "Realized " + (pos.pnl >= 0 ? "+" : "") + "$" + pos.pnl.toFixed(2) + " on " + pos.asset);
+    }
+
+    // Draw active open positions list
+    function renderActivePositions() {
+      const tbody = document.getElementById("active-positions-tbody");
+      const countBadge = document.getElementById("active-positions-count");
+      
+      countBadge.innerText = openPositions.length + " Open";
+      
+      if (openPositions.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="py-10 text-center text-gray-500 italic">No active positions open. Use the order ticket above to place trades.</td></tr>`;
+        return;
+      }
+
+      let rows = "";
+      openPositions.forEach(pos => {
+        const decimals = assetsData[pos.asset].point;
+        const pnlColor = pos.pnl >= 0 ? "text-neonGreen" : "text-neonRose";
+        rows += `
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-all">
+            <td class="py-3.5 px-4 font-bold text-white">${pos.asset}</td>
+            <td class="py-3.5 px-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${pos.type === 'BUY' ? 'bg-neonGreen/10 text-neonGreen border border-neonGreen/20' : 'bg-neonRose/10 text-neonRose border border-neonRose/20'}">
+                ${pos.type}
+              </span>
+            </td>
+            <td class="py-3.5 px-4 font-bold">${pos.lots.toFixed(1)}</td>
+            <td class="py-3.5 px-4">${pos.entryPrice.toFixed(decimals)}</td>
+            <td class="py-3.5 px-4 text-white font-semibold">${pos.currentPrice.toFixed(decimals)}</td>
+            <td class="py-3.5 px-4 font-black ${pnlColor}">${pos.pnl >= 0 ? '+' : ''}$${pos.pnl.toFixed(2)}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button onclick="closePosition('${pos.id}')" class="px-3 py-1.5 bg-white/5 hover:bg-neonRose hover:text-white rounded-lg text-xs font-bold transition-all border border-white/10">
+                Close
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = rows;
+    }
+
+    // Reset simulator histories
+    function clearSimHistory() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      activeAcct.balance = activeAcct.initialSize;
+      activeAcct.equity = activeAcct.initialSize;
+      activeAcct.maxEquity = activeAcct.initialSize;
+      activeAcct.dailyBase = activeAcct.initialSize;
+      activeAcct.status = "active";
+      activeAcct.pnl = 0.00;
+      activeAcct.trades = [];
+      openPositions = [];
+      
+      saveState();
+      renderActivePositions();
+      renderDashboard();
+      renderAdmin();
+      triggerToast("Engine Reset", "Simulated historical parameters flushed back to size parameters.");
+    }
+
+    // AI Behavioral analytics text updates
+    function updateAiRiskAnalytics(winRate, avgPnl, totalTrades) {
+      const element = document.getElementById("ai-risk-text");
+      if (totalTrades === 0) {
+        element.innerHTML = `<span class="italic text-gray-500">No trading history recorded yet. Open a position to start calculating your behavioral safety profile.</span>`;
+        return;
+      }
+
+      let profileText = "";
+      if (winRate >= 60 && avgPnl > 0) {
+        profileText = `<strong>Risk Profiler: Conservative.</strong> System showcases optimal consistency ratios. Leverage indicators are locked within institutional criteria. <strong>Recommendation:</strong> Maintain current scaling formats.`;
+      } else if (winRate < 40) {
+        profileText = `<strong>Risk Profiler: High Leverage Risk.</strong> Margin concentrations are slightly erratic. Consistency scores sit low due to frequent entry swaps. <strong>Recommendation:</strong> Consider decreasing lot volumes and adjusting trailing stop levels.`;
+      } else {
+        profileText = `<strong>Risk Profiler: Neutral / Systematic.</strong> Steady balance distributions. Leverage bounds are matching compliance mandates successfully. <strong>Recommendation:</strong> Continue current trading formatting protocols.`;
+      }
+      element.innerHTML = profileText;
+    }
+
+    // Core Dashboard visual rendering
+    function renderDashboard() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      
+      // Set values
+      document.getElementById("dash-account-id").innerText = activeAcct.id;
+      document.getElementById("dash-balance-value").innerText = "$" + activeAcct.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById("dash-equity-value").innerText = "$" + activeAcct.equity.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+      // Build status badges
+      const statusBadge = document.getElementById("dash-status-badge");
+      if (activeAcct.status === 'active') {
+        statusBadge.className = "px-2.5 py-0.5 rounded text-xs font-black uppercase bg-neonBlue/10 text-neonBlue border border-neonBlue/20 shadow-glow-blue animate-pulse";
+        statusBadge.innerText = "Phase 1 Active";
+      } else if (activeAcct.status === 'passed') {
+        statusBadge.className = "px-2.5 py-0.5 rounded text-xs font-black uppercase bg-neonGreen/10 text-neonGreen border border-neonGreen/20 shadow-glow-green";
+        statusBadge.innerText = "Challenge Passed";
+      } else {
+        statusBadge.className = "px-2.5 py-0.5 rounded text-xs font-black uppercase bg-neonRose/10 text-neonRose border border-neonRose/20 shadow-glow-rose";
+        statusBadge.innerText = "Account Breached";
+      }
+
+      // Check rules target percentages for indicators
+      const entry = pricingMeta[activeAcct.mode][activeAcct.initialSize];
+      
+      // TARGET PROGRESS
+      if (entry.target === 0) {
+        // Instant Mode
+        document.getElementById("gauge-target-limit").innerText = "No Target (Instant Fund)";
+        document.getElementById("gauge-target-pct").innerText = "PASSING";
+        document.getElementById("gauge-target-bar").style.width = "100%";
+      } else {
+        const netProfit = activeAcct.balance - activeAcct.initialSize;
+        const progressPct = Math.min(Math.max((netProfit / entry.target) * 100, 0), 100);
+        document.getElementById("gauge-target-limit").innerText = "Target: +$" + entry.target.toFixed(2);
+        document.getElementById("gauge-target-pct").innerText = progressPct.toFixed(0) + "%";
+        document.getElementById("gauge-target-bar").style.width = progressPct + "%";
+      }
+
+      // DAILY DRAWDOWN
+      const dailyLoss = activeAcct.dailyBase - activeAcct.equity;
+      const dailyLossClamped = Math.max(dailyLoss, 0);
+      const dailyPct = Math.min((dailyLossClamped / entry.daily) * 100, 100);
+      document.getElementById("gauge-daily-loss").innerText = "$" + dailyLossClamped.toFixed(2) + " Loss";
+      document.getElementById("gauge-daily-limit").innerText = "Max Loss: -$" + entry.daily.toFixed(2);
+      document.getElementById("gauge-daily-pct").innerText = dailyPct.toFixed(0) + "%";
+      document.getElementById("gauge-daily-bar").style.width = dailyPct + "%";
+
+      // MAX DRAWDOWN
+      const maxLoss = activeAcct.initialSize - activeAcct.equity;
+      const maxLossClamped = Math.max(maxLoss, 0);
+      const maxPct = Math.min((maxLossClamped / entry.max) * 100, 100);
+      document.getElementById("gauge-max-loss").innerText = "$" + maxLossClamped.toFixed(2) + " Loss";
+      document.getElementById("gauge-max-limit").innerText = "Max Loss: -$" + entry.max.toFixed(2);
+      document.getElementById("gauge-max-pct").innerText = maxPct.toFixed(0) + "%";
+      document.getElementById("gauge-max-bar").style.width = maxPct + "%";
+
+      // Draw Closed Journal list
+      const journalList = document.getElementById("journal-history-list");
+      if (activeAcct.trades.length === 0) {
+        journalList.innerHTML = `<div class="text-center text-gray-500 text-xs italic py-8">No historical trades logged.</div>`;
+        updateAiRiskAnalytics(0, 0, 0);
+        return;
+      }
+
+      let items = "";
+      let wins = 0;
+      let netPnl = 0;
+      
+      activeAcct.trades.forEach(trade => {
+        if (trade.pnl > 0) wins++;
+        netPnl += trade.pnl;
+        const decimals = assetsData[trade.asset].point;
+        
+        items += `
+          <div class="bg-obsidian-light/60 p-3 rounded-xl border border-white/5 flex items-center justify-between text-xs transition-all hover:bg-white/5">
+            <div>
+              <div class="flex items-center space-x-1.5 font-bold">
+                <span class="text-white">${trade.asset}</span>
+                <span class="${trade.type === 'BUY' ? 'text-neonGreen' : 'text-neonRose'}">${trade.type}</span>
+                <span class="text-[10px] text-gray-500">${trade.lots} lots</span>
+              </div>
+              <div class="text-[10px] text-gray-500 mt-1">In: ${trade.entryPrice.toFixed(decimals)} &bull; Out: ${trade.closePrice.toFixed(decimals)}</div>
+            </div>
+            <div class="text-right">
+              <strong class="${trade.pnl >= 0 ? 'text-neonGreen' : 'text-neonRose'}">${trade.pnl >= 0 ? '+' : ''}$${trade.pnl.toFixed(2)}</strong>
+              <div class="text-[9px] text-gray-500 mt-0.5">${trade.time}</div>
+            </div>
+          </div>
+        `;
+      });
+      journalList.innerHTML = items;
+
+      const winRate = (wins / activeAcct.trades.length) * 100;
+      const avgPnl = netPnl / activeAcct.trades.length;
+      updateAiRiskAnalytics(winRate, avgPnl, activeAcct.trades.length);
+    }
+
+    // Real-Time Simulated Ticks & Drawdown Checks
+    function runTick() {
+      // Fluctuate asset prices randomly
+      for (let symbol in assetsData) {
+        const asset = assetsData[symbol];
+        const change = (Math.random() - 0.5) * asset.speed;
+        asset.price += change;
+        if (asset.price < 0.001) asset.price = 0.001; // safety clamp
+      }
+
+      // Update Order Form bid/ask tickers
+      const activeData = assetsData[currentAsset];
+      document.getElementById("ticker-bid").innerText = activeData.price.toFixed(activeData.point);
+      document.getElementById("ticker-ask").innerText = (activeData.price + activeData.spread).toFixed(activeData.point);
+
+      // Fluctuate open positions P&Ls
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      let floatingPnl = 0;
+
+      if (openPositions.length > 0) {
+        openPositions.forEach(pos => {
+          const livePrice = assetsData[pos.asset].price;
+          pos.currentPrice = livePrice;
+          
+          // Calculate PnL based on contract sizing
+          const contractSize = pos.asset === 'BTCUSD' ? 1 : pos.asset === 'XAUUSD' ? 100 : 100000;
+          let delta = pos.type === 'BUY' ? (livePrice - pos.entryPrice) : (pos.entryPrice - livePrice);
+          pos.pnl = delta * pos.lots * contractSize;
+          floatingPnl += pos.pnl;
+        });
+
+        renderActivePositions();
+      }
+
+      // Update Equity levels
+      activeAcct.equity = activeAcct.balance + floatingPnl;
+      if (activeAcct.equity > activeAcct.maxEquity) {
+        activeAcct.maxEquity = activeAcct.equity;
+      }
+
+      // Live drawing candlestick tick values on Canvas
+      drawCanvasChart();
+
+      // RuleBreach validations checks
+      if (activeAcct.status === "active") {
+        const entry = pricingMeta[activeAcct.mode][activeAcct.initialSize];
+        
+        // 1. Daily Drawdown Check
+        const dailyLoss = activeAcct.dailyBase - activeAcct.equity;
+        if (dailyLoss >= entry.daily) {
+          triggerBreach(activeAcct, "Daily Drawdown Limit Exceeded");
+        }
+
+        // 2. Maximum Drawdown Check
+        const maxLoss = activeAcct.initialSize - activeAcct.equity;
+        if (maxLoss >= entry.max) {
+          triggerBreach(activeAcct, "Maximum Drawdown Limit Exceeded");
+        }
+
+        // 3. Profit Target Passed Check
+        if (entry.target > 0) {
+          const profit = activeAcct.balance - activeAcct.initialSize;
+          if (profit >= entry.target && openPositions.length === 0) {
+            triggerChallengePass(activeAcct);
+          }
+        }
+      }
+
+      renderDashboard();
+      renderAdmin();
+      renderPayouts();
+    }
+
+    // Rules breach trigger
+    function triggerBreach(account, reason) {
+      account.status = "breached";
+      openPositions = []; // close all
+      saveState();
+      
+      triggerToast("Account Breached!", reason + ". Account HUX-7840132 is disabled. Please purchase another challenge or reset balances.");
+      renderActivePositions();
+      renderDashboard();
+      renderAdmin();
+    }
+
+    // Rules pass trigger
+    function triggerChallengePass(account) {
+      account.status = "passed";
+      saveState();
+
+      triggerToast("Challenge Passed! 🏆", "You have successfully reached the target profit requirements. KYC Promotion approved by admin.");
+      renderDashboard();
+      renderAdmin();
+    }
+
+    // Interactive Toast Notification
+    function triggerToast(title, desc) {
+      const toast = document.getElementById("toast-notification");
+      document.getElementById("toast-title").innerText = title;
+      document.getElementById("toast-desc").innerText = desc;
+
+      toast.style.transform = "translateX(0)";
+      
+      // Auto dismiss after 6 seconds
+      setTimeout(dismissToast, 6000);
+    }
+
+    function dismissToast() {
+      const toast = document.getElementById("toast-notification");
+      toast.style.transform = "translateX(150%)";
+    }
+
+    // Custom Canvas Line & Candle Charting Rendering
+    function drawCanvasChart() {
+      const canvas = document.getElementById("live-trading-chart");
+      if (!canvas) return;
+
+      const livePrice = assetsData[currentAsset].price;
+      
+      // Append current live close to price histories
+      let lastCandle = priceHistory[priceHistory.length - 1];
+      
+      // Fluctuate the active candle or append new index
+      lastCandle.close = livePrice;
+      if (livePrice > lastCandle.high) lastCandle.high = livePrice;
+      if (livePrice < lastCandle.low) lastCandle.low = livePrice;
+
+      // Tick candle roll logic
+      if (Math.random() > 0.90) {
+        priceHistory.shift();
+        priceHistory.push({
+          open: livePrice,
+          high: livePrice,
+          low: livePrice,
+          close: livePrice
+        });
+      }
+
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Find min/max ranges for scale adjustments
+      let minVal = Infinity;
+      let maxVal = -Infinity;
+      priceHistory.forEach(c => {
+        if (c.low < minVal) minVal = c.low;
+        if (c.high > maxVal) maxVal = c.high;
+      });
+
+      // Add padding
+      const pad = (maxVal - minVal) * 0.15 || 0.0001;
+      maxVal += pad;
+      minVal -= pad;
+
+      const range = maxVal - minVal;
+
+      // Draw Grid lines
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.03)";
+      ctx.lineWidth = 1;
+      for (let i = 1; i < 6; i++) {
+        const horizY = h * (i / 6);
+        ctx.beginPath();
+        ctx.moveTo(0, horizY);
+        ctx.lineTo(w, horizY);
+        ctx.stroke();
+      }
+
+      const candleWidth = w / maxHistoryPoints;
+
+      // Draw Candlesticks
+      priceHistory.forEach((c, idx) => {
+        const x = idx * candleWidth + (candleWidth * 0.1);
+        const candleW = candleWidth * 0.8;
+
+        const openY = h - ((c.open - minVal) / range) * h;
+        const closeY = h - ((c.close - minVal) / range) * h;
+        const highY = h - ((c.high - minVal) / range) * h;
+        const lowY = h - ((c.low - minVal) / range) * h;
+
+        const isGreen = c.close >= c.open;
+        
+        ctx.strokeStyle = isGreen ? "#00ff87" : "#ff0055";
+        ctx.fillStyle = isGreen ? "rgba(0, 255, 135, 0.2)" : "rgba(255, 0, 85, 0.2)";
+        ctx.lineWidth = 1.5;
+
+        // Wick line
+        ctx.beginPath();
+        ctx.moveTo(x + candleW / 2, highY);
+        ctx.lineTo(x + candleW / 2, lowY);
+        ctx.stroke();
+
+        // Real body
+        ctx.fillRect(x, Math.min(openY, closeY), candleW, Math.abs(openY - closeY) || 1);
+        ctx.strokeRect(x, Math.min(openY, closeY), candleW, Math.abs(openY - closeY) || 1);
+      });
+
+      // Draw active floating horizontal order line indicator if position exists
+      openPositions.forEach(pos => {
+        if (pos.asset === currentAsset) {
+          const entryY = h - ((pos.entryPrice - minVal) / range) * h;
+          ctx.strokeStyle = pos.type === 'BUY' ? "rgba(0, 255, 135, 0.4)" : "rgba(255, 0, 85, 0.4)";
+          ctx.setLineDash([5, 5]);
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(0, entryY);
+          ctx.lineTo(w, entryY);
+          ctx.stroke();
+          ctx.setLineDash([]);
+          
+          ctx.fillStyle = pos.type === 'BUY' ? "#00ff87" : "#ff0055";
+          ctx.font = "9px Inter";
+          ctx.fillText(pos.type + " SL/TP Entry", 10, entryY - 4);
+        }
+      });
+
+      // Price indicator
+      const activeCloseY = h - ((livePrice - minVal) / range) * h;
+      ctx.strokeStyle = "#00f0ff";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, activeCloseY);
+      ctx.lineTo(w, activeCloseY);
+      ctx.stroke();
+
+      ctx.fillStyle = "#00f0ff";
+      ctx.font = "bold 9px Inter";
+      ctx.fillText("LIVE: " + livePrice.toFixed(assetsData[currentAsset].point), w - 85, activeCloseY - 4);
+    }
+
+    // KYC Upload Simulators
+    let kycActiveDoc = "passport";
+
+    function selectKycDoc(type) {
+      kycActiveDoc = type;
+      document.querySelectorAll("#kyc-form-step2 button[id^='btn-kyc-']").forEach(btn => {
+        btn.className = "py-2.5 rounded-lg text-xs font-bold transition-all text-gray-400 hover:text-white hover:bg-white/5 border border-transparent";
+      });
+      document.getElementById("btn-kyc-" + type).className = "py-2.5 rounded-lg text-xs font-bold transition-all text-white bg-white/5 border border-white/10";
+    }
+
+    function kycGoToStep(step) {
+      document.getElementById("kyc-form-step1").classList.add("hidden");
+      document.getElementById("kyc-form-step2").classList.add("hidden");
+      document.getElementById("kyc-form-step3").classList.add("hidden");
+
+      document.getElementById("kyc-step-1-badge").className = "text-gray-500";
+      document.getElementById("kyc-step-2-badge").className = "text-gray-500";
+      document.getElementById("kyc-step-3-badge").className = "text-gray-500";
+
+      if (step === 1) {
+        document.getElementById("kyc-form-step1").classList.remove("hidden");
+        document.getElementById("kyc-step-1-badge").className = "text-neonBlue";
+      } else if (step === 2) {
+        document.getElementById("kyc-form-step2").classList.remove("hidden");
+        document.getElementById("kyc-step-2-badge").className = "text-neonBlue";
+      } else {
+        document.getElementById("kyc-form-step3").classList.remove("hidden");
+        document.getElementById("kyc-step-3-badge").className = "text-neonGreen shadow-glow-green";
+        
+        // Save database updates
+        const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+        activeAcct.kycStatus = "pending";
+        saveState();
+        renderAdmin();
+      }
+    }
+
+    function runSimulatedKycScan() {
+      const init = document.getElementById("kyc-upload-initial");
+      const scan = document.getElementById("kyc-upload-scanning");
+      const comp = document.getElementById("kyc-upload-completed");
+      const line = document.getElementById("kyc-scanline");
+
+      init.classList.add("hidden");
+      scan.classList.remove("hidden");
+      line.classList.remove("hidden");
+
+      setTimeout(() => {
+        scan.classList.add("hidden");
+        line.classList.add("hidden");
+        comp.classList.remove("hidden");
+
+        const submitBtn = document.getElementById("btn-kyc-submit");
+        submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+        submitBtn.disabled = false;
+      }, 3000);
+    }
+
+    // Payout Center Systems
+    function renderPayouts() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      const profit = Math.max(activeAcct.balance - activeAcct.initialSize, 0);
+      
+      // Read dynamic profit split ratio from active account options
+      const splitPct = (activeAcct.addons && activeAcct.addons.profitSplit) ? activeAcct.addons.profitSplit : 80;
+      const share = profit * (splitPct / 100);
+
+      document.getElementById("payout-total-profit").innerText = "$" + profit.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById("payout-split-pct").innerText = splitPct + "% / " + (100 - splitPct) + "%";
+      document.getElementById("payout-withdrawable").innerText = "$" + share.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+      const logs = document.getElementById("payout-logs-list");
+      if (DB.payoutRequests.length === 0) {
+        logs.innerHTML = `<div class="text-center py-6 text-gray-500 italic text-sm">No transaction records logged.</div>`;
+        return;
+      }
+
+      let items = "";
+      DB.payoutRequests.forEach(req => {
+        let statusBadge = "";
+        if (req.status === 'pending') {
+          statusBadge = `<span class="text-neonAmber bg-neonAmber/10 border border-neonAmber/20 px-2 py-0.5 rounded text-[10px] font-bold">Pending Review</span>`;
+        } else {
+          statusBadge = `<span class="text-neonGreen bg-neonGreen/10 border border-neonGreen/20 px-2 py-0.5 rounded text-[10px] font-bold">Paid Out</span>`;
+        }
+
+        items += `
+          <div class="bg-obsidian-light/60 p-4 rounded-xl border border-white/5 flex items-center justify-between text-xs transition-all hover:bg-white/5">
+            <div>
+              <strong class="text-white block">$${req.amount.toFixed(2)} USD</strong>
+              <span class="text-gray-500 block mt-1">Via ${req.gateway} &bull; ${req.dest}</span>
+            </div>
+            <div class="text-right">
+              ${statusBadge}
+              <span class="text-gray-500 block mt-1 text-[9px]">${req.date}</span>
+            </div>
+          </div>
+        `;
+      });
+      logs.innerHTML = items;
+    }
+
+    function changePayoutGateway() {
+      const gateway = document.getElementById("payout-gateway").value;
+      const label = document.getElementById("payout-destination-label");
+      const destInput = document.getElementById("payout-destination");
+
+      if (gateway === 'USDT') {
+        label.innerText = "USDT Wallet Address";
+        destInput.placeholder = "e.g. TXf4sP7...";
+      } else if (gateway === 'BTC') {
+        label.innerText = "BTC Wallet Address";
+        destInput.placeholder = "e.g. bc1qxy...";
+      } else {
+        label.innerText = "Bank Wire Details (IBAN/BIC)";
+        destInput.placeholder = "e.g. US29CHASE102030...";
+      }
+    }
+
+    function payoutSetMax() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      const profit = Math.max(activeAcct.balance - activeAcct.initialSize, 0);
+      const splitPct = (activeAcct.addons && activeAcct.addons.profitSplit) ? activeAcct.addons.profitSplit : 80;
+      const share = profit * (splitPct / 100);
+      document.getElementById("payout-amount").value = share.toFixed(2);
+    }
+
+    function submitPayoutRequest() {
+      const amount = parseFloat(document.getElementById("payout-amount").value);
+      const dest = document.getElementById("payout-destination").value;
+      const gateway = document.getElementById("payout-gateway").value;
+      
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      const profit = Math.max(activeAcct.balance - activeAcct.initialSize, 0);
+      const share = profit * 0.8;
+
+      if (isNaN(amount) || amount <= 0) {
+        triggerToast("Invalid Payout Amount", "Please input a positive numeric profit split request.");
+        return;
+      }
+      if (amount > share) {
+        triggerToast("Insufficient Available Share", "Request exceeds withdrawable 80% split target limit of $" + share.toFixed(2));
+        return;
+      }
+      if (!dest) {
+        triggerToast("Empty Destination Address", "Destination payment parameters required.");
+        return;
+      }
+
+      // Deduct from simulated virtual accounts
+      activeAcct.balance -= amount;
+      activeAcct.pnl = activeAcct.balance - activeAcct.initialSize;
+
+      const newReq = {
+        id: "PAY-" + Math.floor(Math.random() * 900000 + 100000),
+        amount: amount,
+        gateway: gateway,
+        dest: dest,
+        status: "pending",
+        date: new Date().toLocaleDateString()
+      };
+
+      DB.payoutRequests.unshift(newReq);
+      saveState();
+      
+      document.getElementById("payout-amount").value = "";
+      document.getElementById("payout-destination").value = "";
+
+      renderPayouts();
+      renderDashboard();
+      renderAdmin();
+
+      triggerToast("Payout Request Submitted", "Deducted $" + amount.toFixed(2) + " from live balances. Verification details in admin portal review.");
+    }
+
+    // Affiliate code copies
+    function copyAffLink() {
+      const link = document.getElementById("aff-url-link").innerText;
+      navigator.clipboard.writeText(link);
+      triggerToast("Referral Link Copied!", "Copied affiliate details to device paste buffer.");
+    }
+
+    function renderAffiliate() {
+      document.getElementById("aff-clicks").innerText = DB.affClicks;
+      document.getElementById("aff-signups").innerText = DB.affSignups;
+      document.getElementById("aff-comm").innerText = "$" + DB.affComm.toLocaleString('en-US', { minimumFractionDigits: 2 });
+    }
+
+    // Admin Center Management Toggles
+    function renderAdmin() {
+      document.getElementById("admin-kpi-sales").innerText = "$" + DB.payoutsSales.toLocaleString('en-US', { minimumFractionDigits: 2 });
+      document.getElementById("admin-kpi-payouts").innerText = "$" + DB.payoutsPaid.toLocaleString('en-US', { minimumFractionDigits: 2 });
+      
+      const breaches = DB.accounts.filter(a => a.status === 'breached').length;
+      document.getElementById("admin-kpi-breaches").innerText = breaches + " Accounts";
+
+      // Render tables list
+      const tbody = document.getElementById("admin-accounts-tbody");
+      let rows = "";
+      
+      DB.accounts.forEach(acct => {
+        let statusCol = "";
+        if (acct.status === 'active') {
+          statusCol = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-neonBlue/10 text-neonBlue border border-neonBlue/20">Active</span>`;
+        } else if (acct.status === 'passed') {
+          statusCol = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-neonGreen/10 text-neonGreen border border-neonGreen/20">Passed</span>`;
+        } else {
+          statusCol = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-neonRose/10 text-neonRose border border-neonRose/20">Breached</span>`;
+        }
+
+        let kycCol = "";
+        if (acct.kycStatus === 'none') {
+          kycCol = `<span class="text-gray-500 font-semibold text-xs">Unsubmitted</span>`;
+        } else if (acct.kycStatus === 'pending') {
+          kycCol = `<span class="text-neonAmber font-bold text-xs animate-pulse">Pending Override</span>`;
+        } else {
+          kycCol = `<span class="text-neonGreen font-bold text-xs">Approved</span>`;
+        }
+
+        rows += `
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-all text-xs">
+            <td class="py-3.5 px-4 font-bold text-white">${acct.id}</td>
+            <td class="py-3.5 px-4 uppercase font-semibold text-gray-500">${acct.mode}</td>
+            <td class="py-3.5 px-4">$${acct.balance.toLocaleString('en-US', { minimumFractionDigits: 2 })}</td>
+            <td class="py-3.5 px-4 font-semibold text-white">$${acct.equity.toLocaleString('en-US', { minimumFractionDigits: 2 })}</td>
+            <td class="py-3.5 px-4 font-bold ${acct.pnl >= 0 ? 'text-neonGreen' : 'text-neonRose'}">$${acct.pnl.toLocaleString('en-US', { minimumFractionDigits: 2 })}</td>
+            <td class="py-3.5 px-4">${kycCol}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button onclick="adminSelectAccount('${acct.id}')" class="px-2 py-1.5 bg-white/5 hover:bg-neonBlue hover:text-obsidian rounded-lg font-bold transition-all border border-white/10">
+                Manage
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = rows;
+
+      // Render Admin KYC queue text details helper
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      document.getElementById("admin-kyc-name").innerText = "John Doe (" + activeAcct.id + ")";
+      
+      const kycQueueText = document.getElementById("admin-kyc-type");
+      if (activeAcct.kycStatus === 'none') {
+        kycQueueText.innerHTML = `No KYC files submitted.`;
+      } else if (activeAcct.kycStatus === 'pending') {
+        kycQueueText.innerHTML = `Biometrics scanned. <span class="text-neonAmber font-bold">Awaiting confirmation</span>`;
+      } else {
+        kycQueueText.innerHTML = `Document check <span class="text-neonGreen font-bold">Approved</span>`;
+      }
+    }
+
+    function adminSelectAccount(acctId) {
+      document.getElementById("admin-target-id").value = acctId;
+      triggerToast("Trader Targeted", "Targeted account " + acctId + " successfully inside the Admin Control panel.");
+    }
+
+    // Force pass challenge manually via admin panel override
+    function adminTriggerPass() {
+      const id = document.getElementById("admin-target-id").value || DB.activeAccountId;
+      const acct = DB.accounts.find(a => a.id === id);
+      if (!acct) {
+        triggerToast("Override Failed", "Target Account ID not located.");
+        return;
+      }
+
+      acct.status = "passed";
+      openPositions = []; // clean active trades
+      saveState();
+      
+      renderActivePositions();
+      renderDashboard();
+      renderAdmin();
+
+      triggerToast("Admin Override Approved", "Forced PASS override for target " + id);
+    }
+
+    // Force breach account manually via admin panel override
+    function adminTriggerFail() {
+      const id = document.getElementById("admin-target-id").value || DB.activeAccountId;
+      const acct = DB.accounts.find(a => a.id === id);
+      if (!acct) {
+        triggerToast("Override Failed", "Target Account ID not located.");
+        return;
+      }
+
+      triggerBreach(acct, "Administrative Override Revocation");
+    }
+
+    function adminResetBalance() {
+      const id = document.getElementById("admin-target-id").value || DB.activeAccountId;
+      const acct = DB.accounts.find(a => a.id === id);
+      if (!acct) {
+        triggerToast("Override Failed", "Target Account ID not located.");
+        return;
+      }
+
+      acct.balance = acct.initialSize;
+      acct.equity = acct.initialSize;
+      acct.maxEquity = acct.initialSize;
+      acct.dailyBase = acct.initialSize;
+      acct.status = "active";
+      acct.pnl = 0.00;
+      acct.trades = [];
+      openPositions = [];
+
+      saveState();
+      renderActivePositions();
+      renderDashboard();
+      renderAdmin();
+
+      triggerToast("Account Balanced", "Forced initial scale reset for " + id + " to $" + acct.initialSize);
+    }
+
+    function adminApproveKyc() {
+      const activeAcct = DB.accounts.find(a => a.id === DB.activeAccountId);
+      if (activeAcct.kycStatus === 'none') {
+        triggerToast("Audit Revoked", "Trader has not uploaded document verification details yet.");
+        return;
+      }
+
+      activeAcct.kycStatus = "approved";
+      saveState();
+      renderAdmin();
+
+      // Trigger payout balance simulation logs approvals
+      DB.payoutRequests.forEach(req => {
+        if (req.status === 'pending') {
+          req.status = 'approved';
+          DB.payoutsPaid += req.amount;
+        }
+      });
+      saveState();
+
+      renderPayouts();
+      triggerToast("KYC Compliance Approved", "Passport biometric matching verified successfully. Payout gateways unlocked.");
+    }
+
+    function runAdminBiometric() {
+      const bioBtn = document.getElementById("btn-admin-bio");
+      const lockScreen = document.getElementById("admin-lock-screen");
+      const mainContent = document.getElementById("admin-main-content");
+      
+      bioBtn.disabled = true;
+      bioBtn.innerHTML = `
+        <span class="w-3.5 h-3.5 rounded-full border-2 border-neonBlue border-t-transparent animate-spin mr-2"></span>
+        <span>Scanning Biometric Print...</span>
+      `;
+      
+      setTimeout(() => {
+        lockScreen.classList.add("hidden");
+        mainContent.classList.remove("hidden");
+        
+        bioBtn.disabled = false;
+        bioBtn.innerHTML = `
+          <svg class="w-4 h-4 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11a13.918 13.918 0 00-6.125-11.538M3.57 18.06c-.956-.372-1.92-.81-2.887-1.309M21 11c0 2.268-.423 4.437-1.196 6.442M16 11c0 1.242-.233 2.43-.656 3.525M17.25 18c-.896-.36-1.785-.765-2.67-1.206M12 5a3 3 0 11-6 0 3 3 0 016 0zm0 0c.346.828.538 1.733.538 2.686 0 2.829-1.98 5.199-4.643 5.778"/></svg>
+          <span>Biometric Signature Scan</span>
+        `;
+        
+        triggerToast("Terminal Authorized", "Biometric signature validated. Session active under Administrator role.");
+      }, 2000);
+    }
+
+    // STATEFUL AUTHENTICATION GATEWAY CONTROLLER
+    let activeAuthMode = "signin";
+    let authenticatedUser = null;
+    let pendingRegisterData = null;
+
+    // Check on initialization if session exists in DB
+    if (localStorage.getItem("hux_active_user")) {
+      authenticatedUser = localStorage.getItem("hux_active_user");
+      updateHeaderAuthUi();
+    }
+
+    function openAuthModal(mode) {
+      activeAuthMode = mode;
+      document.getElementById("auth-modal").classList.remove("hidden");
+      document.getElementById("auth-panel-main").classList.remove("hidden");
+      document.getElementById("auth-panel-otp").classList.add("hidden");
+      document.getElementById("auth-error-msg").classList.add("hidden");
+      
+      // Clear inputs
+      document.getElementById("auth-email").value = "";
+      document.getElementById("auth-pass").value = "";
+      
+      toggleAuthMode(mode);
+    }
+
+    function closeAuthModal() {
+      document.getElementById("auth-modal").classList.add("hidden");
+    }
+
+    function toggleAuthMode(mode) {
+      activeAuthMode = mode;
+      const title = document.getElementById("auth-modal-title");
+      const desc = document.getElementById("auth-modal-desc");
+      const btn = document.getElementById("btn-auth-submit");
+      const toggleIn = document.getElementById("btn-toggle-signin");
+      const toggleUp = document.getElementById("btn-toggle-signup");
+      const strengthPanel = document.getElementById("signup-strength-panel");
+
+      if (mode === 'signin') {
+        title.innerText = "Sign In to HUX";
+        desc.innerText = "Enter credentials to open your live trading synchronization sessions.";
+        btn.innerText = "Secure Log In";
+        toggleIn.className = "py-2 rounded-lg text-white bg-white/5 border border-white/5";
+        toggleUp.className = "py-2 text-gray-400 hover:text-white";
+        strengthPanel.classList.add("hidden");
+      } else {
+        title.innerText = "Create HUX Account";
+        desc.innerText = "Configure a secure signature profiles to access virtual prop allocations.";
+        btn.innerText = "Register Secure Profile";
+        toggleUp.className = "py-2 rounded-lg text-white bg-white/5 border border-white/5";
+        toggleIn.className = "py-2 text-gray-400 hover:text-white";
+        strengthPanel.classList.remove("hidden");
+      }
+    }
+
+    function checkPasswordStrength() {
+      if (activeAuthMode !== 'signup') return;
+      
+      const pass = document.getElementById("auth-pass").value;
+      const txt = document.getElementById("strength-txt");
+      const bar = document.getElementById("strength-bar");
+
+      if (pass.length === 0) {
+        txt.innerText = "Empty";
+        txt.className = "text-gray-500";
+        bar.style.width = "0%";
+        bar.className = "h-full bg-gray-500 transition-all";
+        return;
+      }
+
+      let score = 0;
+      if (pass.length >= 6) score++;
+      if (/[A-Z]/.test(pass)) score++;
+      if (/[0-9]/.test(pass)) score++;
+      if (/[^A-Za-z0-9]/.test(pass)) score++;
+
+      if (score <= 1) {
+        txt.innerText = "Weak";
+        txt.className = "text-neonRose";
+        bar.style.width = "25%";
+        bar.className = "h-full bg-neonRose transition-all shadow-glow-rose";
+      } else if (score === 2) {
+        txt.innerText = "Medium";
+        txt.className = "text-neonAmber";
+        bar.style.width = "60%";
+        bar.className = "h-full bg-neonAmber transition-all";
+      } else {
+        txt.innerText = "Strong";
+        txt.className = "text-neonGreen";
+        bar.style.width = "100%";
+        bar.className = "h-full bg-neonGreen transition-all shadow-glow-green";
+      }
+    }
+
+    // Submit Initial credentials check
+    function submitAuthGate() {
+      const email = document.getElementById("auth-email").value.trim();
+      const pass = document.getElementById("auth-pass").value;
+      const errorMsg = document.getElementById("auth-error-msg");
+
+      if (!email || !pass) {
+        errorMsg.innerText = "Please complete all validation fields.";
+        errorMsg.classList.remove("hidden");
+        return;
+      }
+
+      if (activeAuthMode === 'signup') {
+        // Sign Up Mode checks
+        if (pass.length < 6) {
+          errorMsg.innerText = "Passcode must contain at least 6 characters.";
+          errorMsg.classList.remove("hidden");
+          return;
+        }
+
+        // Store registration details temporarily awaiting OTP validation
+        pendingRegisterData = { email, pass };
+      } else {
+        // Sign In Mode checks - verify if email matches a mockup user
+        // Whitelist demo account parameters or let user log in
+        pendingRegisterData = { email, pass };
+      }
+
+      // Hide main inputs & trigger 2FA OTP prompt page
+      document.getElementById("auth-panel-main").classList.add("hidden");
+      document.getElementById("auth-panel-otp").classList.remove("hidden");
+      document.getElementById("auth-otp").value = "";
+      document.getElementById("otp-error-msg").classList.add("hidden");
+      
+      triggerToast("OTP Token Generated", "Device matching handshake initialized. Enter verification passcode.");
+    }
+
+    // Verify OTP token matches "102943"
+    function submitOtpVerification() {
+      const token = document.getElementById("auth-otp").value.trim();
+      const otpErr = document.getElementById("otp-error-msg");
+
+      if (token === "102943") {
+        otpErr.classList.add("hidden");
+        
+        // Log in user
+        authenticatedUser = pendingRegisterData.email;
+        localStorage.setItem("hux_active_user", authenticatedUser);
+        
+        // Dynamic profile update
+        updateHeaderAuthUi();
+        closeAuthModal();
+        
+        // Trigger page redirects
+        switchTab("dashboard");
+        triggerToast("Authentication Approved 🔒", "Signature credentials validated. Handshake sync Established.");
+      } else {
+        otpErr.classList.remove("hidden");
+      }
+    }
+
+    function handleSignOut() {
+      authenticatedUser = null;
+      localStorage.removeItem("hux_active_user");
+      updateHeaderAuthUi();
+      switchTab("landing");
+      triggerToast("Logged Out Successfully", "Your administrative and trading sessions have been secured and closed.");
+    }
+
+    function updateHeaderAuthUi() {
+      const btnIn = document.getElementById("btn-header-signin");
+      const btnUp = document.getElementById("btn-header-signup");
+      const badge = document.getElementById("header-profile-badge");
+      const emailLabel = document.getElementById("header-profile-email");
+
+      if (authenticatedUser) {
+        btnIn.classList.add("hidden");
+        btnUp.classList.add("hidden");
+        badge.classList.remove("hidden");
+        emailLabel.innerText = authenticatedUser;
+      } else {
+        btnIn.classList.remove("hidden");
+        btnUp.classList.remove("hidden");
+        badge.classList.add("hidden");
+      }
+    }
+
+    function triggerMockSso(provider) {
+      triggerToast("SSO handshake in progress", "Querying profile details from " + provider + " authorization servers...");
+      
+      setTimeout(() => {
+        authenticatedUser = provider.toLowerCase() + "_trader@huxprop.com";
+        localStorage.setItem("hux_active_user", authenticatedUser);
+        updateHeaderAuthUi();
+        closeAuthModal();
+        
+        switchTab("dashboard");
+        triggerToast("Authentication Approved 🔒", "Successfully signed in via " + provider + " credentials.");
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
