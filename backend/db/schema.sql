@@ -18,12 +18,15 @@ CREATE TYPE trade_type AS ENUM ('BUY', 'SELL');
 CREATE TYPE trade_status AS ENUM ('open', 'closed');
 CREATE TYPE payout_status AS ENUM ('pending', 'approved', 'paid', 'declined');
 CREATE TYPE broker_type AS ENUM ('mt4', 'mt5', 'ctrader', 'match_trader', 'dxtrade');
+CREATE TYPE oauth_provider_type AS ENUM ('google', 'apple', 'email');
+CREATE TYPE payment_status_type AS ENUM ('pending', 'completed', 'failed', 'refunded');
+CREATE TYPE platform_type_enum AS ENUM ('mt4', 'mt5', 'ctrader', 'match_trader', 'dxtrade', 'other');
 
--- 1. USERS TABLE
+-- 1. USERS TABLE (Updated with OAuth support)
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255),
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     role user_role DEFAULT 'trader'::user_role,
@@ -31,6 +34,8 @@ CREATE TABLE users (
     kyc_status kyc_status_type DEFAULT 'none'::kyc_status_type,
     two_factor_enabled BOOLEAN DEFAULT FALSE,
     two_factor_secret VARCHAR(100),
+    oauth_provider oauth_provider_type DEFAULT 'email'::oauth_provider_type,
+    oauth_id VARCHAR(255),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -58,7 +63,7 @@ CREATE TABLE challenges (
     daily_drawdown_limit DECIMAL(12, 2) NOT NULL, -- e.g., 250.00 (5%)
     max_drawdown_limit DECIMAL(12, 2) NOT NULL, -- e.g., 500.00 (10%)
     fee DECIMAL(10, 2) NOT NULL, -- purchase cost
-    purchase_status VARCHAR(50) DEFAULT 'paid', -- paid, pending, refunded
+    purchase_status VARCHAR(50) DEFAULT 'pending_admin_approval', -- pending_admin_approval, paid, refunded
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -139,16 +144,65 @@ CREATE TABLE system_audits (
     audited_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 9. PAYMENTS TABLE (NEW - Track Stripe payments)
+CREATE TABLE payments (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    stripe_session_id VARCHAR(255) UNIQUE NOT NULL,
+    amount DECIMAL(12, 2) NOT NULL,
+    status payment_status_type DEFAULT 'pending'::payment_status_type,
+    challenge_type VARCHAR(50),
+    challenge_size VARCHAR(50),
+    completed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 10. PLATFORM LINKS TABLE (NEW - Link trading accounts to platforms)
+CREATE TABLE platform_links (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    trading_account_id UUID REFERENCES trading_accounts(id) ON DELETE CASCADE,
+    platform_type platform_type_enum NOT NULL,
+    platform_login VARCHAR(255) NOT NULL,
+    platform_server VARCHAR(255),
+    status VARCHAR(50) DEFAULT 'active', -- active, inactive, disconnected
+    last_sync TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 11. ADMIN NOTIFICATIONS TABLE (NEW - Track admin approvals)
+CREATE TABLE admin_notifications (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    type VARCHAR(50) NOT NULL, -- payment_confirmation, kyc_pending, etc
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    challenge_id UUID REFERENCES challenges(id) ON DELETE SET NULL,
+    message TEXT NOT NULL,
+    status VARCHAR(50) DEFAULT 'pending', -- pending, approved, rejected
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
 -- ============================================================================
 -- PERFORMANCE & INTEGRITY INDEXES
 -- ============================================================================
 CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_oauth ON users(oauth_provider, oauth_id);
 CREATE INDEX idx_kyc_user_status ON kyc_documents(user_id, status);
 CREATE INDEX idx_accounts_login ON trading_accounts(login_id);
 CREATE INDEX idx_accounts_status ON trading_accounts(status);
+CREATE INDEX idx_accounts_user ON trading_accounts(user_id);
 CREATE INDEX idx_trades_account ON trades(account_id);
 CREATE INDEX idx_trades_status ON trades(status);
 CREATE INDEX idx_payouts_user ON payouts(user_id);
 CREATE INDEX idx_payouts_status ON payouts(status);
 CREATE INDEX idx_referrals_referrer ON referrals(referrer_id);
 CREATE INDEX idx_audits_account ON system_audits(account_id);
+CREATE INDEX idx_payments_user ON payments(user_id);
+CREATE INDEX idx_payments_status ON payments(status);
+CREATE INDEX idx_payments_stripe ON payments(stripe_session_id);
+CREATE INDEX idx_platform_links_account ON platform_links(trading_account_id);
+CREATE INDEX idx_platform_links_status ON platform_links(status);
+CREATE INDEX idx_admin_notifications_status ON admin_notifications(status);
+CREATE INDEX idx_challenges_user ON challenges(user_id);
+CREATE INDEX idx_challenges_status ON challenges(purchase_status);
+
