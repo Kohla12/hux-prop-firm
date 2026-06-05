@@ -23,7 +23,7 @@ CREATE TYPE broker_type AS ENUM ('mt4', 'mt5', 'ctrader', 'match_trader', 'dxtra
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255),                    -- nullable for OAuth-only users
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     role user_role DEFAULT 'trader'::user_role,
@@ -31,6 +31,8 @@ CREATE TABLE users (
     kyc_status kyc_status_type DEFAULT 'none'::kyc_status_type,
     two_factor_enabled BOOLEAN DEFAULT FALSE,
     two_factor_secret VARCHAR(100),
+    oauth_provider VARCHAR(50),                    -- 'google', 'apple', or NULL for email/password
+    oauth_subject VARCHAR(255),                    -- provider-specific user ID (sub claim)
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -139,16 +141,58 @@ CREATE TABLE system_audits (
     audited_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 9. STRIPE PAYMENT SESSIONS
+-- Tracks every Stripe Checkout session so payments can be reconciled
+-- independently of the webhook and reviewed by admins before provisioning.
+CREATE TYPE payment_status AS ENUM ('pending', 'paid', 'failed', 'refunded');
+CREATE TYPE approval_status AS ENUM ('pending', 'approved', 'rejected');
+
+CREATE TABLE payments (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
+    stripe_session_id VARCHAR(255) UNIQUE NOT NULL,
+    stripe_payment_intent VARCHAR(255),
+    amount_cents INTEGER NOT NULL,                 -- amount in cents as received from Stripe
+    currency VARCHAR(10) DEFAULT 'usd',
+    challenge_type VARCHAR(50),
+    challenge_size DECIMAL(12, 2),
+    status payment_status DEFAULT 'pending'::payment_status,
+    metadata JSONB,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 10. ADMIN PAYMENT APPROVALS
+-- Admin must explicitly approve a payment before the funded account is
+-- provisioned. This decouples Stripe confirmation from account creation
+-- and gives the ops team a manual review gate.
+CREATE TABLE payment_approvals (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    payment_id UUID REFERENCES payments(id) ON DELETE CASCADE,
+    admin_id UUID REFERENCES users(id) ON DELETE SET NULL,
+    status approval_status DEFAULT 'pending'::approval_status,
+    admin_notes TEXT,
+    reviewed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
 -- ============================================================================
 -- PERFORMANCE & INTEGRITY INDEXES
 -- ============================================================================
 CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_oauth ON users(oauth_provider, oauth_subject);
 CREATE INDEX idx_kyc_user_status ON kyc_documents(user_id, status);
 CREATE INDEX idx_accounts_login ON trading_accounts(login_id);
 CREATE INDEX idx_accounts_status ON trading_accounts(status);
+CREATE INDEX idx_accounts_user ON trading_accounts(user_id);
 CREATE INDEX idx_trades_account ON trades(account_id);
 CREATE INDEX idx_trades_status ON trades(status);
 CREATE INDEX idx_payouts_user ON payouts(user_id);
 CREATE INDEX idx_payouts_status ON payouts(status);
 CREATE INDEX idx_referrals_referrer ON referrals(referrer_id);
 CREATE INDEX idx_audits_account ON system_audits(account_id);
+CREATE INDEX idx_payments_user ON payments(user_id);
+CREATE INDEX idx_payments_status ON payments(status);
+CREATE INDEX idx_payments_stripe_session ON payments(stripe_session_id);
+CREATE INDEX idx_payment_approvals_payment ON payment_approvals(payment_id);
+CREATE INDEX idx_payment_approvals_status ON payment_approvals(status);
