@@ -10,6 +10,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_mock_keys');
 const cors = require('cors');
+const { ensureDatabaseSchema } = require('./db/migrate');
 
 const app = express();
 app.use(express.json());
@@ -23,6 +24,20 @@ const pool = new Pool({
 
 const JWT_SECRET = process.env.JWT_SECRET || 'HUX_FUTURISTIC_SECURE_KEY';
 const BCRYPT_SALT_ROUNDS = 12;
+
+// ============================================================================
+// DATABASE INITIALIZATION
+// ============================================================================
+async function initializeApp() {
+    try {
+        console.log('[HUX Backend] Initializing database schema...');
+        await ensureDatabaseSchema();
+        console.log('[HUX Backend] ✓ Database ready');
+    } catch (error) {
+        console.error('[HUX Backend] Failed to initialize database:', error);
+        process.exit(1);
+    }
+}
 
 // ============================================================================
 // 1. SECURE USER REGISTRATION (Persisting to PostgreSQL)
@@ -216,6 +231,33 @@ app.post('/api/checkout/webhook', express.raw({ type: 'application/json' }), asy
     return res.status(200).json({ received: true });
 });
 
+// ============================================================================
+// HEALTH CHECK ENDPOINT
+// ============================================================================
+app.get('/health', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT NOW()');
+        return res.status(200).json({ 
+            status: 'healthy',
+            database: 'connected',
+            timestamp: result.rows[0].now
+        });
+    } catch (error) {
+        return res.status(503).json({ 
+            status: 'unhealthy',
+            database: 'disconnected',
+            error: error.message
+        });
+    }
+});
+
 // Start listening
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`[HUX Backend Engine] running securely on port ${PORT}`));
+
+initializeApp().then(() => {
+    app.listen(PORT, () => {
+        console.log(`[HUX Backend Engine] running securely on port ${PORT}`);
+        console.log(`[HUX Backend Engine] Database: ${process.env.DATABASE_URL ? 'Railway Postgres' : 'Local'}`);
+    });
+});
+
