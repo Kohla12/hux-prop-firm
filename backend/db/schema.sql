@@ -18,12 +18,14 @@ CREATE TYPE trade_type AS ENUM ('BUY', 'SELL');
 CREATE TYPE trade_status AS ENUM ('open', 'closed');
 CREATE TYPE payout_status AS ENUM ('pending', 'approved', 'paid', 'declined');
 CREATE TYPE broker_type AS ENUM ('mt4', 'mt5', 'ctrader', 'match_trader', 'dxtrade');
+CREATE TYPE payment_status AS ENUM ('pending', 'completed', 'failed', 'refunded');
+CREATE TYPE approval_status AS ENUM ('pending', 'approved', 'rejected');
 
 -- 1. USERS TABLE
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255),
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     role user_role DEFAULT 'trader'::user_role,
@@ -31,6 +33,7 @@ CREATE TABLE users (
     kyc_status kyc_status_type DEFAULT 'none'::kyc_status_type,
     two_factor_enabled BOOLEAN DEFAULT FALSE,
     two_factor_secret VARCHAR(100),
+    oauth_provider VARCHAR(50), -- 'google', 'apple', or NULL for email/password
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -48,7 +51,33 @@ CREATE TABLE kyc_documents (
     verified_at TIMESTAMP WITH TIME ZONE
 );
 
--- 3. CHALLENGE SCHEMES CONFIGURATION TABLE
+-- 3. PAYMENTS TABLE (Stripe payment tracking)
+CREATE TABLE payments (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    stripe_session_id VARCHAR(255) UNIQUE NOT NULL,
+    amount DECIMAL(12, 2) NOT NULL,
+    status payment_status DEFAULT 'pending'::payment_status,
+    challenge_type VARCHAR(50),
+    challenge_size DECIMAL(12, 2),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    completed_at TIMESTAMP WITH TIME ZONE
+);
+
+-- 4. PAYMENT APPROVALS TABLE (Admin approval workflow)
+CREATE TABLE payment_approvals (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    payment_amount DECIMAL(12, 2) NOT NULL,
+    status approval_status DEFAULT 'pending'::approval_status,
+    stripe_session_id VARCHAR(255),
+    rejection_reason TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    approved_at TIMESTAMP WITH TIME ZONE,
+    rejected_at TIMESTAMP WITH TIME ZONE
+);
+
+-- 5. CHALLENGE SCHEMES CONFIGURATION TABLE
 CREATE TABLE challenges (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID REFERENCES users(id) ON DELETE CASCADE,
@@ -62,7 +91,7 @@ CREATE TABLE challenges (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- 4. TRADING ACCOUNTS TABLE (MT4/5 Broker Bridges mappings)
+-- 6. TRADING ACCOUNTS TABLE (MT4/5 Broker Bridges mappings)
 CREATE TABLE trading_accounts (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID REFERENCES users(id) ON DELETE CASCADE,
@@ -83,7 +112,7 @@ CREATE TABLE trading_accounts (
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- 5. TRADES HISTORY LOG
+-- 7. TRADES HISTORY LOG
 CREATE TABLE trades (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     account_id UUID REFERENCES trading_accounts(id) ON DELETE CASCADE,
@@ -102,7 +131,7 @@ CREATE TABLE trades (
     status trade_status DEFAULT 'open'::trade_status
 );
 
--- 6. WITHDRAWAL PAYOUTS TABLE
+-- 8. WITHDRAWAL PAYOUTS TABLE
 CREATE TABLE payouts (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID REFERENCES users(id) ON DELETE CASCADE,
@@ -116,7 +145,7 @@ CREATE TABLE payouts (
     paid_at TIMESTAMP WITH TIME ZONE
 );
 
--- 7. REFERRALS & AFFILIATE COMMISSIONS
+-- 9. REFERRALS & AFFILIATE COMMISSIONS
 CREATE TABLE referrals (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     referrer_id UUID REFERENCES users(id) ON DELETE CASCADE,
@@ -128,7 +157,7 @@ CREATE TABLE referrals (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- 8. SYSTEM AUDIT & RULE VIOLATION LOGS
+-- 10. SYSTEM AUDIT & RULE VIOLATION LOGS
 CREATE TABLE system_audits (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     account_id UUID REFERENCES trading_accounts(id) ON DELETE CASCADE,
@@ -144,11 +173,17 @@ CREATE TABLE system_audits (
 -- ============================================================================
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_kyc_user_status ON kyc_documents(user_id, status);
+CREATE INDEX idx_payments_user ON payments(user_id);
+CREATE INDEX idx_payments_status ON payments(status);
+CREATE INDEX idx_approvals_user ON payment_approvals(user_id);
+CREATE INDEX idx_approvals_status ON payment_approvals(status);
 CREATE INDEX idx_accounts_login ON trading_accounts(login_id);
 CREATE INDEX idx_accounts_status ON trading_accounts(status);
+CREATE INDEX idx_accounts_user ON trading_accounts(user_id);
 CREATE INDEX idx_trades_account ON trades(account_id);
 CREATE INDEX idx_trades_status ON trades(status);
 CREATE INDEX idx_payouts_user ON payouts(user_id);
 CREATE INDEX idx_payouts_status ON payouts(status);
 CREATE INDEX idx_referrals_referrer ON referrals(referrer_id);
 CREATE INDEX idx_audits_account ON system_audits(account_id);
+
