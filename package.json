@@ -17,7 +17,9 @@
     "bcrypt": "^5.1.1",
     "jsonwebtoken": "^9.1.2",
     "stripe": "^14.8.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "google-auth-library": "^9.6.3",
+    "apple-signin-auth": "^1.7.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
