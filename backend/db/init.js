@@ -8,27 +8,34 @@ const { Pool } = require('pg');
 const fs = require('fs');
 const path = require('path');
 
+if (!process.env.DATABASE_URL) {
+    console.error('[DB Init] ERROR: DATABASE_URL environment variable is not set');
+    process.exit(1);
+}
+
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://hux_admin:HUX_secure_db_pass_2026@localhost:5432/hux_prop_firm',
+    connectionString: process.env.DATABASE_URL,
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 });
 
 async function initializeDatabase() {
     try {
-        console.log('[DB Init] Connecting to PostgreSQL...');
+        console.log('[DB Init] Connecting to Neon PostgreSQL...');
         
         // Test connection
         const client = await pool.connect();
-        console.log('[DB Init] ✓ Connected to PostgreSQL');
+        console.log('[DB Init] ✓ Connected to Neon database');
         
-        // Read schema file
-        const schemaPath = path.join(__dirname, 'schema.sql');
-        const schema = fs.readFileSync(schemaPath, 'utf8');
+        // Verify schema exists by checking for users table
+        const result = await client.query(
+            `SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_name = 'users')`
+        );
         
-        // Execute schema
-        console.log('[DB Init] Executing schema...');
-        await client.query(schema);
-        console.log('[DB Init] ✓ Database schema initialized successfully');
+        if (result.rows[0].exists) {
+            console.log('[DB Init] ✓ Database schema already initialized');
+        } else {
+            console.log('[DB Init] ⚠ Schema not found. Please run the migration script first.');
+        }
         
         client.release();
         await pool.end();

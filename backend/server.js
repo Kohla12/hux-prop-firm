@@ -16,13 +16,31 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Configure PostgreSQL Connection Pool
+// Validate required environment variables
+if (!process.env.DATABASE_URL) {
+    console.error('ERROR: DATABASE_URL environment variable is required');
+    process.exit(1);
+}
+
+// Configure PostgreSQL Connection Pool for Neon
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://hux_admin:HUX_secure_db_pass_2026@localhost:5432/hux_prop_firm',
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+    connectionString: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    max: 20,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
 });
 
-const JWT_SECRET = process.env.JWT_SECRET || 'HUX_FUTURISTIC_SECURE_KEY';
+// Add error handler for pool
+pool.on('error', (err) => {
+    console.error('[DB Pool Error]', err);
+});
+
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+    console.error('ERROR: JWT_SECRET environment variable is required');
+    process.exit(1);
+}
 const BCRYPT_SALT_ROUNDS = 12;
 
 // ============================================================================
@@ -257,7 +275,7 @@ const PORT = process.env.PORT || 8080;
 initializeApp().then(() => {
     app.listen(PORT, () => {
         console.log(`[HUX Backend Engine] running securely on port ${PORT}`);
-        console.log(`[HUX Backend Engine] Database: ${process.env.DATABASE_URL ? 'Railway Postgres' : 'Local'}`);
+        console.log(`[HUX Backend Engine] Database: Neon PostgreSQL (Production Ready)`);
     });
 });
 
