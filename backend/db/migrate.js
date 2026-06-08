@@ -9,8 +9,12 @@ const fs = require('fs');
 const path = require('path');
 
 async function ensureDatabaseSchema() {
+    if (!process.env.DATABASE_URL) {
+        throw new Error('DATABASE_URL environment variable is required');
+    }
+
     const pool = new Pool({
-        connectionString: process.env.DATABASE_URL || 'postgresql://hux_admin:HUX_secure_db_pass_2026@localhost:5432/hux_prop_firm',
+        connectionString: process.env.DATABASE_URL,
         ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
     });
 
