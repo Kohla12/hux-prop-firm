@@ -19,7 +19,24 @@ app.use(cors());
 // Validate required environment variables
 if (!process.env.DATABASE_URL) {
     console.error('ERROR: DATABASE_URL environment variable is required');
+    console.error('Set DATABASE_URL in your environment or .env file');
     process.exit(1);
+}
+
+// Configure JWT_SECRET with safe fallback for development
+let JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+    if (process.env.NODE_ENV === 'production') {
+        console.error('ERROR: JWT_SECRET environment variable is required for production');
+        console.error('Generate with: openssl rand -base64 32');
+        console.error('Set JWT_SECRET in your deployment environment variables');
+        process.exit(1);
+    } else {
+        // Safe fallback for local development only
+        JWT_SECRET = 'dev_local_secret_do_not_use_in_production_xyz123abc456';
+        console.warn('[WARNING] JWT_SECRET not set. Using development fallback.');
+        console.warn('[WARNING] Set JWT_SECRET environment variable for proper security.');
+    }
 }
 
 // Configure PostgreSQL Connection Pool for Neon
@@ -35,12 +52,6 @@ const pool = new Pool({
 pool.on('error', (err) => {
     console.error('[DB Pool Error]', err);
 });
-
-const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) {
-    console.error('ERROR: JWT_SECRET environment variable is required');
-    process.exit(1);
-}
 const BCRYPT_SALT_ROUNDS = 12;
 
 // ============================================================================
